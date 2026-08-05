@@ -1,0 +1,4414 @@
+<!--
+  TUKI GROUP — TIKTOK SHOP BUSINESS MASTER
+  WordPress-ready HTML fragment.
+  Có thể dán toàn bộ file vào Elementor HTML Widget hoặc Gutenberg Custom HTML.
+  CSS được scope trong #tuki-tts-landing và dùng namespace tts riêng để tránh xung đột theme.
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body:has(> #tuki-tts-landing) {
+    margin: 0 !important;
+  }
+
+  #tuki-tts-landing {
+    --tts-brand-red: #C72027 !important;
+    --tts-brand-red-dark: #A9181E !important;
+    --tts-gradient-important: linear-gradient(135deg, #C72027 0%, #A9181E 100%) !important;
+    --tts-brand-navy: #172A52 !important;
+    --tts-heading: #0F0C29 !important;
+    --tts-deep-navy: #061835 !important;
+    --tts-white: #FFFFFF !important;
+    --tts-surface-soft: #F9FAFB !important;
+    --tts-surface: #F1F2F3 !important;
+    --tts-border: #D1D5DB !important;
+    --tts-text: #505E6B !important;
+    --tts-text-strong: #334155 !important;
+    --tts-text-muted: #69727D !important;
+    --tts-link: #046BD2 !important;
+    --tts-success: #168354 !important;
+    --tts-error: #B42318 !important;
+    --tts-focus: #046BD2 !important;
+    --tts-font-heading: "Inter", "Segoe UI", Arial, sans-serif !important;
+    --tts-font-body: "Plus Jakarta Sans", "Inter", "Segoe UI", Arial, sans-serif !important;
+    --tts-container: 1200px !important;
+    --tts-reading: 760px !important;
+    --tts-radius-sm: 6px !important;
+    --tts-radius-md: 12px !important;
+    --tts-radius-lg: 20px !important;
+    --tts-radius-xl: 28px !important;
+    --tts-radius-pill: 999px !important;
+    --tts-shadow-sm: 0 1px 2px rgba(15, 12, 41, 0.06) !important;
+    --tts-shadow-md: 0 12px 32px rgba(15, 12, 41, 0.10) !important;
+    --tts-shadow-lg: 0 24px 64px rgba(6, 24, 53, 0.18) !important;
+    --tts-ease: cubic-bezier(.2, .8, .2, 1) !important;
+    background: var(--tts-white) !important;
+    color: var(--tts-text) !important;
+    font-family: var(--tts-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    min-width: 0 !important;
+    overflow: clip !important;
+    position: relative !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    isolation: isolate !important;
+  }
+
+  #tuki-tts-landing *,
+  #tuki-tts-landing *::before,
+  #tuki-tts-landing *::after {
+    box-sizing: border-box !important;
+  }
+
+  #tuki-tts-landing h1,
+  #tuki-tts-landing h2,
+  #tuki-tts-landing h3,
+  #tuki-tts-landing h4,
+  #tuki-tts-landing p,
+  #tuki-tts-landing ul,
+  #tuki-tts-landing ol,
+  #tuki-tts-landing figure,
+  #tuki-tts-landing blockquote {
+    margin: 0 !important;
+  }
+
+  #tuki-tts-landing h1,
+  #tuki-tts-landing h2,
+  #tuki-tts-landing h3,
+  #tuki-tts-landing h4,
+  #tuki-tts-landing button,
+  #tuki-tts-landing input,
+  #tuki-tts-landing select,
+  #tuki-tts-landing textarea {
+    font-family: var(--tts-font-heading) !important;
+  }
+
+  #tuki-tts-landing h1,
+  #tuki-tts-landing h2,
+  #tuki-tts-landing h3,
+  #tuki-tts-landing h4 {
+    color: var(--tts-heading) !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  #tuki-tts-landing a {
+    color: inherit !important;
+  }
+
+  #tuki-tts-landing img,
+  #tuki-tts-landing iframe {
+    border: 0 !important;
+    display: block !important;
+    height: auto !important;
+    max-width: 100% !important;
+  }
+
+  #tuki-tts-landing button,
+  #tuki-tts-landing a,
+  #tuki-tts-landing summary,
+  #tuki-tts-landing input,
+  #tuki-tts-landing select,
+  #tuki-tts-landing textarea {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  #tuki-tts-landing [id] {
+    scroll-margin-top: 112px !important;
+  }
+
+  #tuki-tts-landing .tts-skip-link {
+    background: var(--tts-white) !important;
+    border-radius: 0 0 var(--tts-radius-md) var(--tts-radius-md) !important;
+    color: var(--tts-heading) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-weight: 700 !important;
+    left: 20px !important;
+    padding: 10px 16px !important;
+    position: absolute !important;
+    text-decoration: none !important;
+    top: -80px !important;
+    transition: top 160ms var(--tts-ease) !important;
+    z-index: 100 !important;
+  }
+
+  #tuki-tts-landing .tts-skip-link:focus {
+    top: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: var(--tts-container) !important;
+    width: calc(100% - 64px) !important;
+  }
+
+  #tuki-tts-landing .tts-reading {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: var(--tts-reading) !important;
+  }
+
+  #tuki-tts-landing .tts-section {
+    padding-bottom: 96px !important;
+    padding-top: 96px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-section--soft {
+    background: var(--tts-surface-soft) !important;
+  }
+
+  #tuki-tts-landing .tts-section--navy {
+    background: var(--tts-deep-navy) !important;
+    color: rgba(255, 255, 255, 0.78) !important;
+  }
+
+  #tuki-tts-landing .tts-section-heading {
+    margin-bottom: 48px !important;
+    text-align: center !important;
+  }
+
+  #tuki-tts-landing .tts-section-heading--left {
+    margin-bottom: 32px !important;
+    text-align: left !important;
+  }
+
+  #tuki-tts-landing .tts-eyebrow {
+    color: var(--tts-brand-red) !important;
+    display: block !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.12em !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+    text-transform: uppercase !important;
+  }
+
+  #tuki-tts-landing .tts-section-heading h2 {
+    font-size: clamp(28px, 4vw, 42px) !important;
+    font-weight: 750 !important;
+    line-height: 1.16 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 800px !important;
+  }
+
+  #tuki-tts-landing #tts-lo-trinh .tts-eyebrow {
+    font-size: clamp(42px, 5vw, 42px) !important;
+    letter-spacing: -0.045em !important;
+    line-height: 1.16 !important;
+    text-transform: none !important;
+    margin-bottom: 0px !important;
+  }
+
+  #tuki-tts-landing .tts-section-heading--left h2 {
+    margin-left: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-section-heading p {
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 16px !important;
+    max-width: 720px !important;
+  }
+
+  #tuki-tts-landing .tts-section--navy .tts-eyebrow {
+    color: #FF7D82 !important;
+  }
+
+  #tuki-tts-landing .tts-section--navy h2,
+  #tuki-tts-landing .tts-section--navy h3,
+  #tuki-tts-landing .tts-section--navy h4 {
+    color: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing .tts-text-gradient-important {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-button {
+    align-items: center !important;
+    appearance: none !important;
+    background: var(--tts-brand-red) !important;
+    border: 1px solid var(--tts-brand-red) !important;
+    border-radius: var(--tts-radius-md) !important;
+    box-shadow: 0 10px 24px rgba(199, 32, 39, 0.24) !important;
+    color: var(--tts-white) !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    line-height: 1.2 !important;
+    min-height: 52px !important;
+    padding: 14px 24px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    transition: background-color 180ms var(--tts-ease), border-color 180ms var(--tts-ease), box-shadow 180ms var(--tts-ease), transform 180ms var(--tts-ease) !important;
+  }
+
+  #tuki-tts-landing .tts-button:hover {
+    background: var(--tts-brand-red-dark) !important;
+    border-color: var(--tts-brand-red-dark) !important;
+    box-shadow: 0 14px 30px rgba(199, 32, 39, 0.30) !important;
+    color: var(--tts-white) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  #tuki-tts-landing .tts-button:active {
+    box-shadow: 0 6px 16px rgba(199, 32, 39, 0.22) !important;
+    transform: translateY(0) !important;
+  }
+
+  #tuki-tts-landing .tts-button:focus-visible,
+  #tuki-tts-landing a:focus-visible,
+  #tuki-tts-landing summary:focus-visible,
+  #tuki-tts-landing input:focus-visible,
+  #tuki-tts-landing select:focus-visible,
+  #tuki-tts-landing textarea:focus-visible {
+    outline: 3px solid rgba(4, 107, 210, 0.45) !important;
+    outline-offset: 3px !important;
+  }
+
+  #tuki-tts-landing .tts-button--secondary {
+    background: var(--tts-white) !important;
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    box-shadow: none !important;
+    color: var(--tts-heading) !important;
+  }
+
+  #tuki-tts-landing .tts-button--secondary:hover {
+    background: var(--tts-surface-soft) !important;
+    border-color: var(--tts-white) !important;
+    color: var(--tts-heading) !important;
+  }
+
+  #tuki-tts-landing .tts-button--full {
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-hero {
+    background: linear-gradient(180deg, #FFF8F7 0%, #FFFFFF 100%) !important;
+    color: var(--tts-text) !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    padding-bottom: 88px !important;
+    padding-top: 80px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-hero::before {
+    background: rgba(199, 32, 39, 0.08) !important;
+    content: "" !important;
+    height: 560px !important;
+    filter: blur(90px) !important;
+    opacity: 0.72 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    right: -220px !important;
+    top: -190px !important;
+    width: 560px !important;
+  }
+
+  #tuki-tts-landing .tts-hero::after {
+    background: none !important;
+    background-size: auto !important;
+    bottom: -50px !important;
+    content: "" !important;
+    display: none !important;
+    height: 280px !important;
+    left: -40px !important;
+    opacity: 0.34 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    width: 480px !important;
+  }
+
+  #tuki-tts-landing .tts-hero__grid {
+    align-items: center !important;
+    display: grid !important;
+    gap: 48px !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  #tuki-tts-landing .tts-hero__copy {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1040px !important;
+    text-align: center !important;
+  }
+
+  #tuki-tts-landing .tts-badge {
+    align-items: center !important;
+    background: rgba(199, 32, 39, 0.07) !important;
+    border: 1px solid rgba(199, 32, 39, 0.18) !important;
+    border-radius: var(--tts-radius-pill) !important;
+    color: var(--tts-brand-red-dark) !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 13px !important;
+    font-weight: 750 !important;
+    gap: 8px !important;
+    letter-spacing: 0.025em !important;
+    margin-bottom: 0 !important;
+    margin-top: 20px !important;
+    padding: 8px 12px !important;
+  }
+
+  #tuki-tts-landing .tts-badge__dot {
+    animation: tts-badge-pulse 1.8s ease-out infinite !important;
+    background: #FF6066 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 0 0 5px rgba(255, 96, 102, 0.14) !important;
+    height: 7px !important;
+    width: 7px !important;
+  }
+
+  @keyframes tts-badge-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(199, 32, 39, 0.42);
+    }
+    70% {
+      box-shadow: 0 0 0 9px rgba(199, 32, 39, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(199, 32, 39, 0);
+    }
+  }
+
+  #tuki-tts-landing .tts-hero h1,
+  #tuki-tts-landing .tts-hero__headline-text {
+    font-family: var(--tts-font-heading) !important;
+    font-size: clamp(38px, 4vw, 52px) !important;
+    font-weight: 760 !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.08 !important;
+    max-width: 1040px !important;
+  }
+
+  #tuki-tts-landing .tts-hero h1 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-hero__headline-text {
+    color: var(--tts-heading) !important;
+    margin-top: 10px !important;
+  }
+
+  #tuki-tts-landing .tts-hero__headline-text span {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-hero__lead {
+    color: var(--tts-text-strong) !important;
+    font-size: 17px !important;
+    line-height: 1.75 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 24px !important;
+    max-width: 980px !important;
+  }
+
+  #tuki-tts-landing .tts-hero__lead strong {
+    color: var(--tts-heading) !important;
+    font-weight: 800 !important;
+  }
+
+  #tuki-tts-landing .tts-hero__actions {
+    align-items: center !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    justify-content: center !important;
+    margin-top: 32px !important;
+  }
+
+  #tuki-tts-landing .tts-hero .tts-button--secondary {
+    border-color: #D8DCE3 !important;
+    box-shadow: var(--tts-shadow-sm) !important;
+  }
+
+  #tuki-tts-landing .tts-hero .tts-button--secondary:hover {
+    background: #FFF5F3 !important;
+    border-color: rgba(199, 32, 39, 0.28) !important;
+  }
+
+  #tuki-tts-landing .tts-hero__microcopy {
+    color: var(--tts-heading) !important;
+    font-size: 16px !important;
+    font-weight: 750 !important;
+    line-height: 1.65 !important;
+    margin-top: 24px !important;
+  }
+
+  #tuki-tts-landing .tts-video-card {
+    background: var(--tts-white) !important;
+    border: 1px solid #E5E7EB !important;
+    border-radius: var(--tts-radius-xl) !important;
+    box-shadow: 0 24px 64px rgba(15, 12, 41, 0.13) !important;
+    justify-self: center !important;
+    max-width: 860px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 32px !important;
+    padding: 14px !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__frame {
+    aspect-ratio: 16 / 9 !important;
+    background: #020617 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__frame iframe {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__fallback {
+    align-items: center !important;
+    background: #020617 !important;
+    border: 0 !important;
+    color: inherit !important;
+    cursor: pointer !important;
+    display: flex !important;
+    font: inherit !important;
+    height: 100% !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative !important;
+    text-decoration: none !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__fallback[hidden] {
+    display: none !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__fallback img {
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.82 !important;
+    transition: opacity 180ms var(--tts-ease), transform 260ms var(--tts-ease) !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__fallback:hover img {
+    opacity: 0.95 !important;
+    transform: scale(1.02) !important;
+  }
+
+  #tuki-tts-landing .tts-video-card__play {
+    align-items: center !important;
+    background: var(--tts-brand-red) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34) !important;
+    color: var(--tts-white) !important;
+    display: flex !important;
+    font-size: 25px !important;
+    height: 66px !important;
+    justify-content: center !important;
+    left: 50% !important;
+    padding-left: 4px !important;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 66px !important;
+  }
+
+  #tuki-tts-landing .tts-video-card figcaption {
+    align-items: center !important;
+    color: var(--tts-text-muted) !important;
+    display: flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 13px !important;
+    font-weight: 650 !important;
+    gap: 8px !important;
+    justify-content: space-between !important;
+    padding: 14px 8px 4px !important;
+  }
+
+  #tuki-tts-landing .tts-trust-strip {
+    background: var(--tts-white) !important;
+    border-bottom: 1px solid #E7E9ED !important;
+    border-top: 1px solid #E7E9ED !important;
+    box-shadow: var(--tts-shadow-sm) !important;
+  }
+
+  #tuki-tts-landing .tts-trust-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  #tuki-tts-landing .tts-trust-item {
+    align-items: center !important;
+    border-right: 1px solid #E7E9ED !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 11px !important;
+    justify-content: center !important;
+    min-height: 150px !important;
+    padding: 28px 24px !important;
+    text-align: center !important;
+  }
+
+  #tuki-tts-landing .tts-trust-item:last-child {
+    border-right: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-trust-item__number {
+    color: var(--tts-brand-red) !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    font-variant-numeric: tabular-nums !important;
+    letter-spacing: -0.055em !important;
+    line-height: 0.95 !important;
+  }
+
+  #tuki-tts-landing .tts-trust-item__number.tts-is-counting {
+    animation: tts-number-reveal 900ms var(--tts-ease) both !important;
+  }
+
+  @keyframes tts-number-reveal {
+    0% {
+      opacity: 0.2;
+      transform: translateY(8px) scale(0.94);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  #tuki-tts-landing .tts-trust-item__label {
+    color: var(--tts-heading) !important;
+    display: block !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1.45 !important;
+    max-width: 190px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-layout {
+    align-items: stretch !important;
+    display: grid !important;
+    gap: 56px !important;
+    grid-template-columns: minmax(240px, .62fr) minmax(0, 1.38fr) !important;
+    margin-bottom: 72px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-heading {
+    align-self: start !important;
+    padding-top: 26px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-heading h2 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: clamp(42px, 5vw, 45px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.045em !important;
+    line-height: 1.04 !important;
+    max-width: 8.5ch !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-audience-heading .tts-eyebrow {
+    color: var(--tts-text) !important;
+  }
+
+  #tuki-tts-landing .tts-audience-heading p {
+    color: var(--tts-text) !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin-top: 22px !important;
+    max-width: 340px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-heading__line {
+    background: var(--tts-brand-red) !important;
+    border-radius: var(--tts-radius-pill) !important;
+    display: block !important;
+    height: 4px !important;
+    margin-top: 28px !important;
+    width: 64px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-grid {
+    display: flex !important;
+    gap: 14px !important;
+    height: 760px !important;
+    min-width: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card {
+    background: var(--tts-deep-navy) !important;
+    border: 0 !important;
+    border-radius: 24px !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    flex: 0 0 112px !important;
+    isolation: isolate !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: relative !important;
+    transition: flex-basis 880ms var(--tts-ease), box-shadow 520ms var(--tts-ease), transform 520ms var(--tts-ease) !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card.is-active {
+    box-shadow: 0 24px 58px rgba(15, 12, 41, 0.16) !important;
+    cursor: default !important;
+    flex: 1 1 560px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card:focus-visible {
+    outline: 3px solid rgba(4, 107, 210, 0.52) !important;
+    outline-offset: 4px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-grid:has(.tts-audience-card:hover) .tts-audience-card {
+    flex: 0 0 112px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-grid:has(.tts-audience-card:hover) .tts-audience-card:hover {
+    flex: 1 1 560px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card::after {
+    background: rgba(6, 24, 53, 0.48) !important;
+    content: "" !important;
+    inset: 0 !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    transition: opacity 620ms var(--tts-ease) !important;
+    z-index: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card.is-active::after,
+  #tuki-tts-landing .tts-audience-card:hover::after {
+    opacity: 0.06 !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card__image {
+    aspect-ratio: 3 / 5 !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    transform: scale(1.035) !important;
+    transition: filter 780ms var(--tts-ease), transform 980ms var(--tts-ease) !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card:not(.is-active) .tts-audience-card__image {
+    filter: grayscale(.42) brightness(.72) !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card.is-active .tts-audience-card__image,
+  #tuki-tts-landing .tts-audience-card:hover .tts-audience-card__image {
+    filter: none !important;
+    transform: scale(1) !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card__content {
+    background: rgba(255, 255, 255, 0.90) !important;
+    border: 1px solid rgba(255, 255, 255, 0.66) !important;
+    border-radius: 18px !important;
+    left: 18px !important;
+    max-height: calc(50% - 36px) !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    padding: 24px !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    right: 18px !important;
+    top: 18px !important;
+    transform: translateY(12px) !important;
+    transition: opacity 480ms var(--tts-ease), transform 680ms var(--tts-ease), visibility 480ms var(--tts-ease) !important;
+    visibility: hidden !important;
+    z-index: 2 !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    backdrop-filter: blur(14px) !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card.is-active .tts-audience-card__content,
+  #tuki-tts-landing .tts-audience-card:hover .tts-audience-card__content {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card h3 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card p {
+    color: var(--tts-text-strong) !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    margin-top: 12px !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card__collapsed-title {
+    bottom: 66px !important;
+    color: var(--tts-white) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    left: 50% !important;
+    letter-spacing: .04em !important;
+    line-height: 1.25 !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    text-shadow: 0 2px 12px rgba(6, 24, 53, 0.64) !important;
+    top: auto !important;
+    transform: translateX(-50%) rotate(180deg) !important;
+    transition: opacity 420ms var(--tts-ease), transform 620ms var(--tts-ease) !important;
+    white-space: nowrap !important;
+    writing-mode: vertical-rl !important;
+    z-index: 2 !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card.is-active .tts-audience-card__collapsed-title,
+  #tuki-tts-landing .tts-audience-card:hover .tts-audience-card__collapsed-title {
+    opacity: 0 !important;
+    transform: translateX(-50%) translateY(8px) rotate(180deg) !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card__collapsed-index {
+    align-items: center !important;
+    background: rgba(6, 24, 53, 0.72) !important;
+    border: 1px solid rgba(255, 255, 255, 0.32) !important;
+    border-radius: 50% !important;
+    bottom: 18px !important;
+    color: var(--tts-white) !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    height: 38px !important;
+    justify-content: center !important;
+    left: 50% !important;
+    opacity: 1 !important;
+    position: absolute !important;
+    transform: translateX(-50%) !important;
+    transition: opacity 180ms var(--tts-ease) !important;
+    width: 38px !important;
+    z-index: 2 !important;
+  }
+
+  #tuki-tts-landing .tts-audience-card.is-active .tts-audience-card__collapsed-index,
+  #tuki-tts-landing .tts-audience-card:hover .tts-audience-card__collapsed-index {
+    opacity: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack {
+    display: grid !important;
+    gap: 16px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: var(--tts-container) !important;
+  }
+
+  #tuki-tts-landing #tts-noi-dung {
+    background: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing #tts-noi-dung > .tts-container {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  #tuki-tts-landing #tts-noi-dung > .tts-container::before {
+    content: none !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: var(--tts-text) !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-list--columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 32px !important;
+    row-gap: 18px !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-list li {
+    border-bottom: 1px solid #E7E9ED !important;
+    border-radius: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    padding: 15px 0 !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--problem,
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome {
+    background: transparent !important;
+    border-top: 1px solid #DDE1E7 !important;
+    color: var(--tts-text) !important;
+    margin-top: 16px !important;
+    padding: 48px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--problem .tts-list li,
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome .tts-list li {
+    background: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--problem {
+    padding-top: 52px !important;
+  }
+
+  #tuki-tts-landing .tts-problem-grid {
+    border-bottom: 1px solid #E3E6EA !important;
+    border-left: 1px solid #E3E6EA !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    margin-top: 30px !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card {
+    align-items: flex-start !important;
+    background: var(--tts-white) !important;
+    border-right: 1px solid #E3E6EA !important;
+    border-top: 1px solid #E3E6EA !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 258px !important;
+    overflow: hidden !important;
+    padding: 26px !important;
+    position: relative !important;
+    transition: border-color 420ms var(--tts-ease), box-shadow 520ms var(--tts-ease), transform 520ms var(--tts-ease) !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card::before {
+    background: linear-gradient(135deg, rgba(199, 32, 39, 0.15), rgba(4, 107, 210, 0.11)) !important;
+    content: "" !important;
+    inset: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    transition: opacity 520ms var(--tts-ease) !important;
+    z-index: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card:hover {
+    border-color: rgba(199, 32, 39, 0.24) !important;
+    box-shadow: 0 18px 38px rgba(15, 12, 41, 0.10) !important;
+    transform: translateY(-5px) !important;
+    z-index: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card:hover::before {
+    opacity: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card > * {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card__number {
+    color: var(--tts-text-muted) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: .14em !important;
+    line-height: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card__icon {
+    align-items: center !important;
+    color: var(--tts-brand-red) !important;
+    display: inline-flex !important;
+    font-size: 28px !important;
+    height: 42px !important;
+    justify-content: center !important;
+    margin: 24px 0 20px !important;
+    width: 42px !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card h4 {
+    color: var(--tts-heading) !important;
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-problem-card p {
+    color: var(--tts-text-muted) !important;
+    font-size: 16px !important;
+    line-height: 1.58 !important;
+    margin: 10px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome {
+    background: transparent !important;
+    border-top: 1px solid #DDE1E7 !important;
+    color: var(--tts-text) !important;
+    margin-top: 84px !important;
+    padding: 56px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome h3 {
+    max-width: 18ch !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-timeline {
+    margin: 52px auto 0 !important;
+    max-width: 1080px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-timeline::before {
+    background: #CBD2D9 !important;
+    content: "" !important;
+    bottom: 38px !important;
+    left: 50% !important;
+    position: absolute !important;
+    top: 38px !important;
+    transform: translateX(-50%) !important;
+    width: 1px !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step {
+    align-items: center !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr) !important;
+    min-height: 210px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step__number {
+    align-items: center !important;
+    background: var(--tts-white) !important;
+    border: 1px solid #AEB8C3 !important;
+    border-radius: 50% !important;
+    color: var(--tts-brand-red) !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 26px !important;
+    font-weight: 750 !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    height: 76px !important;
+    justify-content: center !important;
+    justify-self: center !important;
+    position: relative !important;
+    width: 76px !important;
+    z-index: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step__content {
+    max-width: 390px !important;
+    padding: 28px 32px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step__content::before {
+    background: #CBD2D9 !important;
+    content: "" !important;
+    height: 1px !important;
+    position: absolute !important;
+    top: 50% !important;
+    width: 72px !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step--right .tts-outcome-step__content {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step--right .tts-outcome-step__content::before {
+    left: -72px !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step--left .tts-outcome-step__content {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: end !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step--left .tts-outcome-step__content::before {
+    right: -72px !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step__eyebrow {
+    color: var(--tts-brand-red) !important;
+    display: block !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    letter-spacing: .12em !important;
+    line-height: 1.2 !important;
+    margin-bottom: 13px !important;
+    text-transform: uppercase !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step__content h4 {
+    color: var(--tts-heading) !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.22 !important;
+    margin: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-outcome-step__content p {
+    color: var(--tts-text) !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    margin: 12px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel h3 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    display: block !important;
+    font-size: clamp(24px, 3vw, 30px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel h3::before {
+    content: none !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel h3::after {
+    background: var(--tts-gradient-important) !important;
+    content: "" !important;
+    display: block !important;
+    height: 2px !important;
+    margin-top: 14px !important;
+    width: 64px !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--problem h3 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: clamp(42px, 5vw, 45px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.045em !important;
+    line-height: 1.2 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    /* max-width: 25ch !important; */
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-bottom: 60px !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--problem h3::after {
+    content: none !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome h3 {
+    font-size: clamp(42px, 5vw, 45px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.045em !important;
+    line-height: 1.2 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: none !important;
+    text-align: center !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome h3::after {
+    content: none !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome strong {
+    color: var(--tts-heading) !important;
+  }
+
+  #tuki-tts-landing .tts-content-stack .tts-panel--outcome .tts-list__mark {
+    background: rgba(199, 32, 39, 0.10) !important;
+    color: var(--tts-brand-red) !important;
+  }
+
+  #tuki-tts-landing .tts-transformation {
+    display: grid !important;
+    gap: 24px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    margin-top: 48px !important;
+  }
+
+  #tuki-tts-landing .tts-panel {
+    border-radius: var(--tts-radius-xl) !important;
+    padding: 40px !important;
+  }
+
+  #tuki-tts-landing .tts-panel--problem {
+    background: #FFF7F7 !important;
+    border: 1px solid #F4D3D5 !important;
+  }
+
+  #tuki-tts-landing .tts-panel--outcome {
+    background: var(--tts-brand-navy) !important;
+    border: 1px solid var(--tts-brand-navy) !important;
+    color: rgba(255, 255, 255, 0.80) !important;
+  }
+
+  #tuki-tts-landing .tts-panel h3 {
+    font-size: 25px !important;
+    font-weight: 750 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 24px !important;
+  }
+
+  #tuki-tts-landing .tts-panel--outcome h3 {
+    color: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing .tts-list {
+    display: grid !important;
+    gap: 14px !important;
+    list-style: none !important;
+    padding: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-list li {
+    align-items: flex-start !important;
+    display: flex !important;
+    font-size: 15px !important;
+    gap: 12px !important;
+    line-height: 1.6 !important;
+  }
+
+  #tuki-tts-landing .tts-list__mark {
+    align-items: center !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    flex: 0 0 22px !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    height: 22px !important;
+    justify-content: center !important;
+    margin-top: 1px !important;
+  }
+
+  #tuki-tts-landing .tts-panel--problem .tts-list__mark {
+    background: rgba(199, 32, 39, 0.10) !important;
+    color: var(--tts-brand-red) !important;
+  }
+
+  #tuki-tts-landing .tts-panel--outcome .tts-list__mark {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #FF8C91 !important;
+  }
+
+  #tuki-tts-landing .tts-panel strong {
+    color: var(--tts-heading) !important;
+    font-weight: 450 !important;
+  }
+
+  #tuki-tts-landing .tts-panel--outcome strong {
+    color: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing .tts-cta-band {
+    align-items: center !important;
+    background: var(--tts-heading) !important;
+    border-radius: var(--tts-radius-xl) !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    display: flex !important;
+    gap: 28px !important;
+    justify-content: space-between !important;
+    margin-top: 56px !important;
+    overflow: hidden !important;
+    padding: 34px 38px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-cta-band::after {
+    background: var(--tts-brand-red) !important;
+    border-radius: 50% !important;
+    content: "" !important;
+    height: 180px !important;
+    opacity: 0.20 !important;
+    position: absolute !important;
+    right: -70px !important;
+    top: -90px !important;
+    width: 180px !important;
+  }
+
+  #tuki-tts-landing .tts-cta-band__copy {
+    max-width: 670px !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-cta-band h3 {
+    color: var(--tts-white) !important;
+    font-size: 23px !important;
+    font-weight: 750 !important;
+    line-height: 1.3 !important;
+  }
+
+  #tuki-tts-landing .tts-cta-band p {
+    font-size: 14px !important;
+    margin-top: 8px !important;
+  }
+
+  #tuki-tts-landing .tts-cta-band .tts-button {
+    flex: 0 0 auto !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid {
+    background: var(--tts-white) !important;
+    border: 1px solid #A73737 !important;
+    border-radius: var(--tts-radius-lg) !important;
+    box-shadow: var(--tts-shadow-md) !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid table {
+    border: 0 !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    margin: 0 !important;
+    min-width: 680px !important;
+    table-layout: fixed !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid th,
+  #tuki-tts-landing .tts-stage-grid td {
+    border-bottom: 1px solid #D8DCE3 !important;
+    border-right: 1px solid #D8DCE3 !important;
+    padding: 20px 22px !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid tr:last-child th,
+  #tuki-tts-landing .tts-stage-grid tr:last-child td {
+    border-bottom: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid tr > *:last-child {
+    border-right: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid thead th,
+  #tuki-tts-landing .tts-stage-grid tbody th {
+    background: #FBE7E8 !important;
+    color: #171717 !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid thead th:first-child,
+  #tuki-tts-landing .tts-stage-grid tbody th {
+    width: 28% !important;
+  }
+
+  #tuki-tts-landing .tts-stage-grid td {
+    background-color: var(--tts-white) !important;
+    background-image: none !important;
+    background-size: auto !important;
+    color: var(--tts-heading) !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.55 !important;
+  }
+
+  #tuki-tts-landing .tts-curriculum {
+    display: grid !important;
+    gap: 14px !important;
+    margin-top: 48px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson {
+    background: var(--tts-white) !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: var(--tts-radius-lg) !important;
+    overflow: hidden !important;
+  }
+
+  #tuki-tts-landing .tts-lesson[open] {
+    border-color: rgba(199, 32, 39, 0.28) !important;
+    box-shadow: var(--tts-shadow-sm) !important;
+  }
+
+  #tuki-tts-landing .tts-lesson summary {
+    align-items: center !important;
+    cursor: pointer !important;
+    display: grid !important;
+    gap: 18px !important;
+    grid-template-columns: 62px minmax(0, 1fr) 34px !important;
+    list-style: none !important;
+    min-height: 92px !important;
+    padding: 18px 24px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__number {
+    align-items: center !important;
+    background: var(--tts-heading) !important;
+    border-radius: 14px !important;
+    color: var(--tts-white) !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    height: 54px !important;
+    justify-content: center !important;
+    width: 54px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson[open] .tts-lesson__number {
+    background: var(--tts-brand-red) !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__title {
+    color: var(--tts-heading) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 18px !important;
+    font-weight: 750 !important;
+    line-height: 1.35 !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__meta {
+    color: var(--tts-text-muted) !important;
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    margin-top: 4px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__toggle {
+    align-items: center !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: 50% !important;
+    color: var(--tts-heading) !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    height: 34px !important;
+    justify-content: center !important;
+    transition: transform 180ms var(--tts-ease) !important;
+    width: 34px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson[open] .tts-lesson__toggle {
+    transform: rotate(45deg) !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__content {
+    border-top: 1px solid #EEF0F3 !important;
+    padding: 8px 28px 28px 104px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__content ol {
+    display: grid !important;
+    gap: 9px !important;
+    padding-left: 20px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__content li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    padding-left: 4px !important;
+  }
+
+  #tuki-tts-landing .tts-lesson__content strong {
+    color: var(--tts-heading) !important;
+    font-weight: 750 !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-layout {
+    align-items: center !important;
+    display: grid !important;
+    gap: clamp(40px, 7vw, 96px) !important;
+    grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr) !important;
+    min-height: 680px !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-layout .tts-section-heading {
+    margin-bottom: 0 !important;
+    text-align: left !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-layout .tts-eyebrow {
+    color: var(--tts-heading) !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-layout .tts-section-heading h2,
+  #tuki-tts-landing .tts-gallery-layout .tts-section-heading p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-layout .tts-section-heading h2 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-weight: 800 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-layout .tts-section-heading p {
+    max-width: 470px !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee {
+    display: grid !important;
+    gap: 14px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    height: 680px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 8%, #000 92%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 8%, #000 92%, transparent 100%) !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee__column {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee__track {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    will-change: transform !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee__column--up .tts-gallery-marquee__track {
+    animation: tts-gallery-scroll-up 24s linear infinite !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee__column--down .tts-gallery-marquee__track {
+    animation: tts-gallery-scroll-down 27s linear infinite !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee__item {
+    background: var(--tts-surface) !important;
+    border-radius: 16px !important;
+    display: block !important;
+    flex: 0 0 auto !important;
+    overflow: hidden !important;
+  }
+
+  #tuki-tts-landing .tts-gallery-marquee__item img {
+    aspect-ratio: .82 / 1 !important;
+    display: block !important;
+    height: auto !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  @keyframes tts-gallery-scroll-up {
+    from { transform: translateY(0); }
+    to { transform: translateY(calc(-50% - 7px)); }
+  }
+
+  @keyframes tts-gallery-scroll-down {
+    from { transform: translateY(calc(-50% - 7px)); }
+    to { transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #tuki-tts-landing .tts-gallery-marquee__track {
+      animation: none !important;
+    }
+  }
+
+  #tuki-tts-landing .tts-testimonials {
+    background: var(--tts-surface-soft) !important;
+  }
+
+  #tuki-tts-landing .tts-testimonials__heading {
+    margin-bottom: 48px !important;
+    text-align: center !important;
+  }
+
+  #tuki-tts-landing .tts-testimonials__heading h2 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: clamp(36px, 4.5vw, 48px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.04em !important;
+    line-height: 1.12 !important;
+    margin: 0 auto !important;
+    max-width: 18ch !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-testimonials__heading p {
+    color: var(--tts-text) !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin: 16px auto 0 !important;
+    max-width: 680px !important;
+  }
+
+  #tuki-tts-landing .tts-testimonials__group {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-testimonials__group + .tts-testimonials__group {
+    border-top: 1px solid #E1E5EA !important;
+    margin-top: 64px !important;
+    padding-top: 56px !important;
+  }
+
+  #tuki-tts-landing .tts-testimonials__image-title {
+    color: var(--tts-heading) !important;
+    font-size: clamp(24px, 3vw, 32px) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.025em !important;
+    line-height: 1.2 !important;
+    margin: 0 0 26px !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-video-grid {
+    display: grid !important;
+    gap: 22px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-video {
+    aspect-ratio: 9 / 16 !important;
+    background: var(--tts-deep-navy) !important;
+    border: 1px solid rgba(199, 32, 39, 0.16) !important;
+    border-radius: 22px !important;
+    box-shadow: 0 18px 44px rgba(15, 12, 41, 0.10) !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-video iframe {
+    border: 0 !important;
+    display: block !important;
+    height: 100% !important;
+    inset: 0 !important;
+    position: absolute !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-image-grid {
+    display: grid !important;
+    gap: 16px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-image {
+    aspect-ratio: 4 / 5 !important;
+    background: var(--tts-white) !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 28px rgba(15, 12, 41, 0.07) !important;
+    display: block !important;
+    overflow: hidden !important;
+    position: relative !important;
+    transform: translateZ(0) !important;
+    transition: box-shadow 420ms var(--tts-ease), transform 520ms var(--tts-ease) !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-image img {
+    display: block !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+    transform: scale(1) !important;
+    transition: transform 680ms var(--tts-ease) !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-image:hover,
+  #tuki-tts-landing .tts-testimonial-image:focus-visible {
+    box-shadow: 0 22px 48px rgba(199, 32, 39, 0.16) !important;
+    outline: 0 !important;
+    transform: translateY(-8px) scale(1.035) !important;
+    z-index: 2 !important;
+  }
+
+  #tuki-tts-landing .tts-testimonial-image:hover img,
+  #tuki-tts-landing .tts-testimonial-image:focus-visible img {
+    transform: scale(1.08) !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox {
+    align-items: center !important;
+    background: rgba(4, 15, 35, 0.92) !important;
+    display: none !important;
+    inset: 0 !important;
+    justify-content: center !important;
+    padding: 34px !important;
+    position: fixed !important;
+    z-index: 1000000 !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox.is-open {
+    display: flex !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__dialog {
+    align-items: center !important;
+    display: flex !important;
+    height: 100% !important;
+    justify-content: center !important;
+    max-height: 920px !important;
+    max-width: 1180px !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__image {
+    background: var(--tts-white) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.35) !important;
+    display: block !important;
+    max-height: calc(100vh - 100px) !important;
+    max-width: calc(100% - 140px) !important;
+    object-fit: contain !important;
+    width: auto !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__button {
+    align-items: center !important;
+    appearance: none !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20) !important;
+    color: var(--tts-heading) !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    height: 52px !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    transition: background-color 180ms var(--tts-ease), transform 180ms var(--tts-ease) !important;
+    width: 52px !important;
+    z-index: 2 !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__button:hover,
+  #tuki-tts-landing .tts-feedback-lightbox__button:focus-visible {
+    background: var(--tts-white) !important;
+    outline: 3px solid rgba(239, 80, 85, 0.55) !important;
+    transform: scale(1.06) !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__close {
+    font-size: 30px !important;
+    right: 0 !important;
+    top: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__previous,
+  #tuki-tts-landing .tts-feedback-lightbox__next {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__previous:hover,
+  #tuki-tts-landing .tts-feedback-lightbox__previous:focus-visible,
+  #tuki-tts-landing .tts-feedback-lightbox__next:hover,
+  #tuki-tts-landing .tts-feedback-lightbox__next:focus-visible {
+    transform: translateY(-50%) scale(1.06) !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__previous {
+    left: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__next {
+    right: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-feedback-lightbox__counter {
+    background: rgba(4, 15, 35, 0.74) !important;
+    border-radius: var(--tts-radius-pill) !important;
+    bottom: 8px !important;
+    color: var(--tts-white) !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    left: 50% !important;
+    line-height: 1 !important;
+    padding: 10px 14px !important;
+    position: absolute !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #tuki-tts-landing .tts-proof-note {
+    align-items: center !important;
+    background: var(--tts-white) !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: var(--tts-radius-md) !important;
+    display: flex !important;
+    font-size: 14px !important;
+    gap: 12px !important;
+    margin-top: 18px !important;
+    padding: 15px 18px !important;
+  }
+
+  #tuki-tts-landing .tts-proof-note__mark {
+    align-items: center !important;
+    background: rgba(22, 131, 84, 0.10) !important;
+    border-radius: 50% !important;
+    color: var(--tts-success) !important;
+    display: inline-flex !important;
+    flex: 0 0 28px !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    height: 28px !important;
+    justify-content: center !important;
+  }
+
+  #tuki-tts-landing .tts-instructor {
+    background: var(--tts-white) !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: var(--tts-radius-xl) !important;
+    box-shadow: 0 24px 64px rgba(15, 12, 41, 0.10) !important;
+    display: grid !important;
+    grid-template-columns: minmax(320px, .82fr) minmax(0, 1.18fr) !important;
+    overflow: hidden !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__portrait {
+    background: var(--tts-heading) !important;
+    min-height: 620px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__portrait::after {
+    background: linear-gradient(180deg, transparent 62%, rgba(6, 24, 53, 0.22) 100%) !important;
+    content: "" !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__portrait img {
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__profile {
+    align-self: center !important;
+    padding: 48px !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__heading {
+    border-bottom: 1px solid #E7E9ED !important;
+    padding-bottom: 24px !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__heading h3 {
+    font-size: clamp(28px, 3vw, 38px) !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__heading p {
+    color: var(--tts-brand-red) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 14px !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.05em !important;
+    margin-top: 10px !important;
+    text-transform: uppercase !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__highlights {
+    list-style: none !important;
+    margin-top: 10px !important;
+    padding: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__highlights li {
+    align-items: flex-start !important;
+    border-bottom: 1px solid #EEF0F3 !important;
+    display: flex !important;
+    font-size: 15px !important;
+    gap: 14px !important;
+    line-height: 1.65 !important;
+    padding: 15px 0 !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__highlights li:last-child {
+    border-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__mark {
+    align-items: center !important;
+    background: rgba(199, 32, 39, 0.09) !important;
+    border-radius: 50% !important;
+    color: var(--tts-brand-red) !important;
+    display: inline-flex !important;
+    flex: 0 0 26px !important;
+    font-family: var(--tts-font-heading) !important;
+    font-weight: 800 !important;
+    height: 26px !important;
+    justify-content: center !important;
+    margin-top: 1px !important;
+  }
+
+  #tuki-tts-landing .tts-instructor__highlights strong {
+    color: var(--tts-heading) !important;
+    font-weight: 800 !important;
+  }
+
+  #tuki-tts-landing .tts-offer {
+    display: block !important;
+  }
+
+  #tuki-tts-landing .tts-offer__copy {
+    margin: 0 auto 40px !important;
+    max-width: 760px !important;
+    text-align: center !important;
+  }
+
+  #tuki-tts-landing .tts-offer__copy h2 {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    font-size: clamp(34px, 4.5vw, 48px) !important;
+    font-weight: 800 !important;
+    line-height: 1.12 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-offer__copy p {
+    color: var(--tts-text) !important;
+    font-size: 16px !important;
+    margin-top: 16px !important;
+    max-width: none !important;
+  }
+
+  #tuki-tts-landing .tts-offer__copy .tts-button {
+    margin-top: 26px !important;
+  }
+
+  #tuki-tts-landing .tts-offer__cards {
+    align-items: start !important;
+    display: grid !important;
+    gap: 56px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card {
+    border-radius: var(--tts-radius-xl) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 342px !important;
+    overflow: hidden !important;
+    padding: 36px !important;
+    position: relative !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--one-plus-one {
+    align-items: stretch !important;
+    background: linear-gradient(135deg, #C72027 0%, #EF6A71 100%) !important;
+    color: var(--tts-white) !important;
+    display: grid !important;
+    gap: 34px !important;
+    grid-template-columns: minmax(0, .82fr) minmax(280px, .58fr) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--one-plus-one__copy {
+    align-self: center !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--one-plus-one__image {
+    border-radius: 18px !important;
+    margin: 0 !important;
+    min-height: 270px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--one-plus-one__image img {
+    display: block !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--golden-kit {
+    background: #FFF1F2 !important;
+    border: 1px solid #F6CDD0 !important;
+    color: var(--tts-heading) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card__icon {
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-radius: 50% !important;
+    color: var(--tts-white) !important;
+    display: inline-flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    height: 56px !important;
+    justify-content: center !important;
+    width: 56px !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--golden-kit .tts-offer-card__icon {
+    background: rgba(199, 32, 39, 0.12) !important;
+    color: var(--tts-brand-red) !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner--one-plus-one .tts-offer-card__icon {
+    background: var(--tts-brand-red) !important;
+    color: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner--golden-kit .tts-offer-card__icon {
+    background: rgba(199, 32, 39, 0.12) !important;
+    color: var(--tts-brand-red) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card h3 {
+    font-size: clamp(22px, 2.4vw, 29px) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    margin: 24px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--one-plus-one h3,
+  #tuki-tts-landing .tts-offer-card--one-plus-one p,
+  #tuki-tts-landing .tts-offer-card--one-plus-one strong {
+    color: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card--one-plus-one__copy p,
+  #tuki-tts-landing .tts-offer-card--one-plus-one__copy p strong {
+    color: var(--tts-white) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card p {
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 16px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card strong {
+    color: var(--tts-heading) !important;
+    font-weight: 800 !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card__list {
+    display: grid !important;
+    gap: 14px !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    list-style: none !important;
+    margin: 18px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card__list li {
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(239, 80, 85, 0.58) !important;
+    border-radius: 16px !important;
+    color: var(--tts-text-strong) !important;
+    display: block !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.55 !important;
+    min-height: 176px !important;
+    padding: 22px !important;
+    position: relative !important;
+    transition: box-shadow 260ms var(--tts-ease), transform 260ms var(--tts-ease) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card__list li:hover {
+    box-shadow: 0 16px 32px rgba(199, 32, 39, 0.12) !important;
+    transform: translateY(-4px) !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card__list-number {
+    align-items: center !important;
+    background: transparent !important;
+    color: var(--tts-brand-red) !important;
+    display: flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    height: auto !important;
+    justify-content: center !important;
+    line-height: 1 !important;
+    margin-bottom: 18px !important;
+    width: fit-content !important;
+  }
+
+  #tuki-tts-landing .tts-offer-card__list li strong {
+    color: var(--tts-heading) !important;
+    display: inline !important;
+    font-size: inherit !important;
+    font-weight: 800 !important;
+    line-height: inherit !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner {
+    background: transparent !important;
+    border: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner--one-plus-one {
+    align-items: stretch !important;
+    display: grid !important;
+    gap: 24px !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner--one-plus-one .tts-offer-card--one-plus-one__copy {
+    align-self: center !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner h3 {
+    color: var(--tts-heading) !important;
+    font-size: clamp(22px, 2.4vw, 29px) !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    margin: 24px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-offer__golden-value {
+    background: var(--tts-gradient-important) !important;
+    background-clip: text !important;
+    color: transparent !important;
+    display: inline-block !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner p {
+    color: var(--tts-text-strong) !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important;
+    margin: 16px 0 0 !important;
+  }
+
+  #tuki-tts-landing .tts-offer__inner--one-plus-one .tts-offer-card--one-plus-one__copy p,
+  #tuki-tts-landing .tts-offer__inner--one-plus-one .tts-offer-card--one-plus-one__copy p strong {
+    color: var(--tts-text-strong) !important;
+  }
+
+  #tuki-tts-landing .tts-faq {
+    display: grid !important;
+    gap: 12px !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item {
+    background: var(--tts-white) !important;
+    border: 1px solid #E1E5EA !important;
+    border-radius: var(--tts-radius-lg) !important;
+    overflow: hidden !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item[open] {
+    border-color: rgba(199, 32, 39, 0.30) !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item summary {
+    align-items: center !important;
+    color: var(--tts-heading) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 16px !important;
+    font-weight: 750 !important;
+    gap: 16px !important;
+    justify-content: space-between !important;
+    line-height: 1.45 !important;
+    list-style: none !important;
+    min-height: 72px !important;
+    padding: 18px 22px !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item__toggle {
+    align-items: center !important;
+    background: var(--tts-surface-soft) !important;
+    border-radius: 50% !important;
+    color: var(--tts-brand-red) !important;
+    display: inline-flex !important;
+    flex: 0 0 32px !important;
+    font-size: 19px !important;
+    font-weight: 500 !important;
+    height: 32px !important;
+    justify-content: center !important;
+    transition: transform 180ms var(--tts-ease) !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item[open] .tts-faq-item__toggle {
+    transform: rotate(45deg) !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item__answer {
+    border-top: 1px solid #EEF0F3 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    padding: 20px 22px 24px !important;
+  }
+
+  #tuki-tts-landing .tts-faq-item__answer strong {
+    color: var(--tts-heading) !important;
+    font-weight: 750 !important;
+  }
+
+  #tuki-tts-landing .tts-register {
+    background: var(--tts-deep-navy) !important;
+    color: rgba(255, 255, 255, 0.76) !important;
+    padding-bottom: 84px !important;
+    padding-top: 84px !important;
+  }
+
+  #tuki-tts-landing .tts-register__grid {
+    align-items: start !important;
+    display: grid !important;
+    gap: 64px !important;
+    grid-template-columns: .82fr 1.18fr !important;
+  }
+
+  #tuki-tts-landing .tts-register__copy {
+    padding-top: 20px !important;
+  }
+
+  #tuki-tts-landing .tts-register__copy h2 {
+    color: var(--tts-white) !important;
+    font-size: clamp(34px, 4.5vw, 50px) !important;
+    font-weight: 780 !important;
+    line-height: 1.13 !important;
+  }
+
+  #tuki-tts-landing .tts-register__copy > p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin-top: 18px !important;
+  }
+
+  #tuki-tts-landing .tts-register__contact-list {
+    display: grid !important;
+    gap: 12px !important;
+    list-style: none !important;
+    margin-top: 30px !important;
+    padding: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-register__contact-list li {
+    align-items: flex-start !important;
+    display: flex !important;
+    font-size: 14px !important;
+    gap: 11px !important;
+    line-height: 1.55 !important;
+  }
+
+  #tuki-tts-landing .tts-register__contact-list span:first-child {
+    color: #FF898E !important;
+    flex: 0 0 20px !important;
+    font-family: var(--tts-font-heading) !important;
+    font-weight: 800 !important;
+  }
+
+  #tuki-tts-landing .tts-register__contact-list a {
+    color: var(--tts-white) !important;
+    text-decoration: none !important;
+  }
+
+  #tuki-tts-landing .tts-register__contact-list a:hover {
+    text-decoration: underline !important;
+  }
+
+  #tuki-tts-landing .tts-form-card {
+    background: var(--tts-white) !important;
+    border-radius: var(--tts-radius-xl) !important;
+    box-shadow: var(--tts-shadow-lg) !important;
+    padding: 38px !important;
+  }
+
+  #tuki-tts-landing .tts-form-card h3 {
+    font-size: 24px !important;
+    font-weight: 750 !important;
+    line-height: 1.3 !important;
+  }
+
+  #tuki-tts-landing .tts-form-card__lead {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    margin-top: 8px !important;
+  }
+
+  #tuki-tts-landing .tts-form {
+    display: grid !important;
+    gap: 18px !important;
+    margin-top: 26px !important;
+  }
+
+  #tuki-tts-landing .tts-form__row {
+    display: grid !important;
+    gap: 16px !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  #tuki-tts-landing .tts-field {
+    display: grid !important;
+    gap: 7px !important;
+  }
+
+  #tuki-tts-landing .tts-field label {
+    color: var(--tts-heading) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+  }
+
+  #tuki-tts-landing .tts-field label span {
+    color: var(--tts-brand-red) !important;
+  }
+
+  #tuki-tts-landing .tts-field input,
+  #tuki-tts-landing .tts-field select,
+  #tuki-tts-landing .tts-field textarea {
+    appearance: none !important;
+    background: var(--tts-white) !important;
+    border: 1px solid var(--tts-border) !important;
+    border-radius: var(--tts-radius-md) !important;
+    box-shadow: none !important;
+    color: var(--tts-heading) !important;
+    font-family: var(--tts-font-body) !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+    margin: 0 !important;
+    min-height: 50px !important;
+    padding: 12px 14px !important;
+    transition: border-color 160ms var(--tts-ease), box-shadow 160ms var(--tts-ease) !important;
+    width: 100% !important;
+  }
+
+  #tuki-tts-landing .tts-field select {
+    background-image: linear-gradient(45deg, transparent 50%, #69727D 50%), linear-gradient(135deg, #69727D 50%, transparent 50%) !important;
+    background-position: calc(100% - 18px) 21px, calc(100% - 13px) 21px !important;
+    background-repeat: no-repeat !important;
+    background-size: 5px 5px, 5px 5px !important;
+    padding-right: 40px !important;
+  }
+
+  #tuki-tts-landing .tts-field textarea {
+    min-height: 104px !important;
+    resize: vertical !important;
+  }
+
+  #tuki-tts-landing .tts-field input::placeholder,
+  #tuki-tts-landing .tts-field textarea::placeholder {
+    color: #98A2B3 !important;
+    opacity: 1 !important;
+  }
+
+  #tuki-tts-landing .tts-field input:hover,
+  #tuki-tts-landing .tts-field select:hover,
+  #tuki-tts-landing .tts-field textarea:hover {
+    border-color: #98A2B3 !important;
+  }
+
+  #tuki-tts-landing .tts-field input:focus,
+  #tuki-tts-landing .tts-field select:focus,
+  #tuki-tts-landing .tts-field textarea:focus {
+    border-color: var(--tts-focus) !important;
+    box-shadow: 0 0 0 3px rgba(4, 107, 210, 0.14) !important;
+    outline: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-field input[aria-invalid="true"],
+  #tuki-tts-landing .tts-field select[aria-invalid="true"],
+  #tuki-tts-landing .tts-field textarea[aria-invalid="true"] {
+    border-color: var(--tts-error) !important;
+    box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.10) !important;
+  }
+
+  #tuki-tts-landing .tts-field__error {
+    color: var(--tts-error) !important;
+    display: none !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+  }
+
+  #tuki-tts-landing .tts-field__error[data-visible="true"] {
+    display: block !important;
+  }
+
+  #tuki-tts-landing .tts-form__note {
+    color: var(--tts-text-muted) !important;
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+  #tuki-tts-landing .tts-form__status {
+    border-radius: var(--tts-radius-md) !important;
+    display: none !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    padding: 12px 14px !important;
+  }
+
+  #tuki-tts-landing .tts-form__status[data-visible="true"] {
+    background: rgba(22, 131, 84, 0.08) !important;
+    color: #116B45 !important;
+    display: block !important;
+  }
+
+  #tuki-tts-landing .tts-sticky {
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border-top: 1px solid #E1E5EA !important;
+    bottom: 0 !important;
+    box-shadow: 0 -12px 32px rgba(15, 12, 41, 0.12) !important;
+    display: none !important;
+    gap: 12px !important;
+    left: 0 !important;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom)) !important;
+    position: fixed !important;
+    right: 0 !important;
+    transition: opacity 180ms var(--tts-ease), transform 180ms var(--tts-ease) !important;
+    z-index: 99999 !important;
+  }
+
+  #tuki-tts-landing .tts-sticky__copy {
+    min-width: 0 !important;
+  }
+
+  #tuki-tts-landing .tts-sticky__copy strong,
+  #tuki-tts-landing .tts-sticky__copy span {
+    display: block !important;
+  }
+
+  #tuki-tts-landing .tts-sticky__copy strong {
+    color: var(--tts-heading) !important;
+    font-family: var(--tts-font-heading) !important;
+    font-size: 13px !important;
+    font-weight: 750 !important;
+    line-height: 1.25 !important;
+  }
+
+  #tuki-tts-landing .tts-sticky__copy span {
+    color: var(--tts-text-muted) !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin-top: 2px !important;
+  }
+
+  #tuki-tts-landing .tts-sticky .tts-button {
+    flex: 0 0 auto !important;
+    min-height: 46px !important;
+    padding: 12px 17px !important;
+  }
+
+  #tuki-tts-landing .tts-sticky--hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: translateY(110%) !important;
+  }
+
+  @media (max-width: 1023px) {
+    #tuki-tts-landing .tts-container {
+      width: calc(100% - 48px) !important;
+    }
+
+    #tuki-tts-landing .tts-section {
+      padding-bottom: 76px !important;
+      padding-top: 76px !important;
+    }
+
+    #tuki-tts-landing .tts-hero {
+      min-height: 0 !important;
+      padding-bottom: 72px !important;
+      padding-top: 72px !important;
+    }
+
+    #tuki-tts-landing .tts-hero__grid {
+      gap: 40px !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-video-card {
+      max-width: 760px !important;
+    }
+
+    #tuki-tts-landing .tts-trust-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item:nth-child(2) {
+      border-right: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item:nth-child(-n + 2) {
+      border-bottom: 1px solid #E7E9ED !important;
+    }
+
+    #tuki-tts-landing .tts-audience-layout {
+      gap: 34px !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-audience-heading {
+      padding-top: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-audience-heading h2 {
+      max-width: 12ch !important;
+    }
+
+    #tuki-tts-landing .tts-audience-heading p {
+      max-width: 620px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-grid {
+      height: 680px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card,
+    #tuki-tts-landing .tts-audience-grid:has(.tts-audience-card:hover) .tts-audience-card {
+      flex-basis: 96px !important;
+    }
+
+    #tuki-tts-landing .tts-content-stack .tts-list--columns {
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-problem-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-timeline {
+      max-width: 860px !important;
+    }
+
+    #tuki-tts-landing .tts-gallery-layout {
+      gap: 44px !important;
+      grid-template-columns: 1fr !important;
+      min-height: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-gallery-marquee {
+      height: 600px !important;
+      max-width: 720px !important;
+    }
+
+    #tuki-tts-landing .tts-testimonial-video-grid {
+      gap: 16px !important;
+    }
+
+    #tuki-tts-landing .tts-testimonial-image-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+
+    #tuki-tts-landing .tts-transformation {
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-instructor {
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-instructor__portrait {
+      min-height: 520px !important;
+    }
+
+    #tuki-tts-landing .tts-offer {
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-offer__cards {
+      gap: 36px !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card__list {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card__list li {
+      min-height: 154px !important;
+    }
+
+    #tuki-tts-landing .tts-register__grid {
+      gap: 42px !important;
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #tuki-tts-landing {
+      padding-bottom: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-container {
+      width: calc(100% - 36px) !important;
+    }
+
+    #tuki-tts-landing .tts-section {
+      padding-bottom: 58px !important;
+      padding-top: 58px !important;
+    }
+
+    #tuki-tts-landing .tts-section-heading {
+      margin-bottom: 34px !important;
+      text-align: left !important;
+    }
+
+    #tuki-tts-landing .tts-section-heading h2,
+    #tuki-tts-landing .tts-section-heading p {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #tuki-tts-landing #tts-lo-trinh .tts-eyebrow {
+      font-size: clamp(34px, 10vw, 44px) !important;
+    }
+
+    #tuki-tts-landing .tts-section-heading p {
+      font-size: 16px !important;
+    }
+
+    #tuki-tts-landing .tts-problem-grid {
+      grid-template-columns: 1fr !important;
+      margin-top: 24px !important;
+    }
+
+    #tuki-tts-landing .tts-problem-card {
+      min-height: 0 !important;
+      padding: 24px !important;
+    }
+
+    #tuki-tts-landing .tts-problem-card__icon {
+      font-size: 25px !important;
+      height: 34px !important;
+      margin: 16px 0 14px !important;
+      width: 34px !important;
+    }
+
+    #tuki-tts-landing .tts-content-stack .tts-panel--outcome {
+      margin-top: 58px !important;
+      padding-top: 48px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-timeline {
+      margin-top: 38px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-timeline::before {
+      bottom: 30px !important;
+      left: 30px !important;
+      top: 30px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-step {
+      grid-template-columns: 60px minmax(0, 1fr) !important;
+      min-height: 0 !important;
+      padding: 0 0 38px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-step__number {
+      font-size: 20px !important;
+      grid-column: 1 !important;
+      height: 60px !important;
+      width: 60px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-step--left .tts-outcome-step__content,
+    #tuki-tts-landing .tts-outcome-step--right .tts-outcome-step__content {
+      grid-column: 2 !important;
+      justify-self: stretch !important;
+      max-width: none !important;
+      padding: 8px 0 8px 24px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-step--left .tts-outcome-step__content::before,
+    #tuki-tts-landing .tts-outcome-step--right .tts-outcome-step__content::before {
+      left: -18px !important;
+      right: auto !important;
+      width: 18px !important;
+    }
+
+    #tuki-tts-landing .tts-outcome-step__content h4 {
+      font-size: 21px !important;
+    }
+
+    #tuki-tts-landing #tts-noi-dung > .tts-container {
+      border-radius: 0 !important;
+      padding: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-audience-layout {
+      gap: 28px !important;
+      margin-bottom: 52px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-heading h2 {
+      font-size: clamp(36px, 10vw, 44px) !important;
+      max-width: 15ch !important;
+    }
+
+    #tuki-tts-landing .tts-content-stack .tts-panel--problem h3 {
+      font-size: clamp(34px, 10vw, 44px) !important;
+      max-width: none !important;
+    }
+
+    #tuki-tts-landing .tts-problem-card__number {
+      font-size: 16px !important;
+    }
+
+    #tuki-tts-landing .tts-content-stack .tts-panel--outcome h3 {
+      font-size: clamp(34px, 10vw, 44px) !important;
+    }
+
+    #tuki-tts-landing .tts-audience-heading p {
+      font-size: 15px !important;
+      margin-top: 16px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-heading__line {
+      margin-top: 20px !important;
+    }
+
+    #tuki-tts-landing .tts-content-stack .tts-panel--problem h3::after {
+      margin-top: 20px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-grid {
+      display: grid !important;
+      gap: 12px !important;
+      height: auto !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card,
+    #tuki-tts-landing .tts-audience-grid:has(.tts-audience-card:hover) .tts-audience-card {
+      display: block !important;
+      flex: none !important;
+      height: 104px !important;
+      transition: height 480ms var(--tts-ease), box-shadow 240ms var(--tts-ease) !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card.is-active,
+    #tuki-tts-landing .tts-audience-grid:has(.tts-audience-card:hover) .tts-audience-card:hover {
+      height: 560px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card__content {
+      left: 14px !important;
+      max-height: calc(50% - 28px) !important;
+      padding: 20px !important;
+      right: 14px !important;
+      top: 14px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card h3 {
+      font-size: 24px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card p {
+      font-size: 14px !important;
+      line-height: 1.55 !important;
+      margin-top: 9px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card__collapsed-title {
+      bottom: auto !important;
+      font-size: 18px !important;
+      left: 72px !important;
+      right: 16px !important;
+      text-align: left !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      writing-mode: horizontal-tb !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card__collapsed-index {
+      bottom: auto !important;
+      left: 18px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card.is-active .tts-audience-card__collapsed-title,
+    #tuki-tts-landing .tts-audience-card:hover .tts-audience-card__collapsed-title {
+      transform: translateY(calc(-50% + 8px)) !important;
+    }
+
+    #tuki-tts-landing .tts-hero {
+      padding-bottom: 54px !important;
+      padding-top: 54px !important;
+    }
+
+    #tuki-tts-landing #tts-title,
+    #tuki-tts-landing .tts-hero__headline-text {
+      font-size: clamp(32px, 9.5vw, 40px) !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      max-width: 90% !important;
+    }
+
+    #tuki-tts-landing .tts-hero__lead {
+      font-size: 16px !important;
+    }
+
+    #tuki-tts-landing .tts-hero__actions {
+      align-items: stretch !important;
+      flex-direction: column !important;
+    }
+
+    #tuki-tts-landing .tts-hero__actions .tts-button {
+      width: 100% !important;
+    }
+
+    #tuki-tts-landing .tts-video-card {
+      border-radius: var(--tts-radius-lg) !important;
+      padding: 9px !important;
+    }
+
+    #tuki-tts-landing .tts-video-card__frame {
+      border-radius: 14px !important;
+    }
+
+    #tuki-tts-landing .tts-video-card figcaption {
+      align-items: flex-start !important;
+      flex-direction: column !important;
+      gap: 3px !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item {
+      gap: 10px !important;
+      min-height: 126px !important;
+      padding: 22px 16px !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item__number {
+      font-size: 38px !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item__label {
+      font-size: 13px !important;
+    }
+
+    #tuki-tts-landing .tts-panel {
+      padding: 28px 22px !important;
+    }
+
+    #tuki-tts-landing .tts-panel h3 {
+      font-size: 22px !important;
+    }
+
+    #tuki-tts-landing .tts-cta-band {
+      align-items: stretch !important;
+      flex-direction: column !important;
+      padding: 28px 22px !important;
+    }
+
+    #tuki-tts-landing .tts-cta-band .tts-button {
+      width: 100% !important;
+    }
+
+    #tuki-tts-landing .tts-stage-grid {
+      border-radius: var(--tts-radius-md) !important;
+      overflow-x: hidden !important;
+    }
+
+    #tuki-tts-landing #tts-curriculum-title {
+      font-size: clamp(34px, 10vw, 44px) !important;
+    }
+
+    #tuki-tts-landing .tts-stage-grid table {
+      min-width: 0 !important;
+      table-layout: fixed !important;
+      width: 100% !important;
+    }
+
+    #tuki-tts-landing .tts-stage-grid th,
+    #tuki-tts-landing .tts-stage-grid td {
+      overflow-wrap: anywhere !important;
+      padding: 13px 8px !important;
+      word-break: normal !important;
+    }
+
+    #tuki-tts-landing .tts-stage-grid thead th,
+    #tuki-tts-landing .tts-stage-grid tbody th {
+      font-size: 11px !important;
+      letter-spacing: 0.01em !important;
+    }
+
+    #tuki-tts-landing .tts-stage-grid td {
+      font-size: 12px !important;
+      line-height: 1.45 !important;
+    }
+
+    #tuki-tts-landing .tts-lesson summary {
+      gap: 12px !important;
+      grid-template-columns: 48px minmax(0, 1fr) 30px !important;
+      min-height: 82px !important;
+      padding: 16px !important;
+    }
+
+    #tuki-tts-landing .tts-lesson__number {
+      border-radius: 12px !important;
+      font-size: 15px !important;
+      height: 46px !important;
+      width: 46px !important;
+    }
+
+    #tuki-tts-landing .tts-lesson__title {
+      font-size: 15px !important;
+    }
+
+    #tuki-tts-landing .tts-lesson__meta {
+      font-size: 11px !important;
+    }
+
+    #tuki-tts-landing .tts-lesson__toggle {
+      height: 30px !important;
+      width: 30px !important;
+    }
+
+    #tuki-tts-landing .tts-lesson__content {
+      padding: 4px 20px 24px 24px !important;
+    }
+
+    #tuki-tts-landing .tts-gallery-layout {
+      gap: 34px !important;
+    }
+
+    #tuki-tts-landing .tts-gallery-marquee {
+      gap: 8px !important;
+      height: 440px !important;
+    }
+
+    #tuki-tts-landing .tts-gallery-marquee__column,
+    #tuki-tts-landing .tts-gallery-marquee__track {
+      gap: 8px !important;
+    }
+
+    #tuki-tts-landing .tts-gallery-marquee__item {
+      border-radius: 10px !important;
+    }
+
+    #tuki-tts-landing .tts-testimonials__heading {
+      margin-bottom: 38px !important;
+      text-align: left !important;
+    }
+
+    #tuki-tts-landing .tts-testimonials__heading h2,
+    #tuki-tts-landing .tts-testimonials__heading p {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-testimonials__group + .tts-testimonials__group {
+      margin-top: 48px !important;
+      padding-top: 42px !important;
+    }
+
+    #tuki-tts-landing .tts-testimonial-video-grid {
+      grid-auto-columns: min(78vw, 300px) !important;
+      grid-auto-flow: column !important;
+      grid-template-columns: none !important;
+      justify-content: start !important;
+      margin-left: -18px !important;
+      margin-right: -18px !important;
+      max-width: none !important;
+      overflow-x: auto !important;
+      overscroll-behavior-inline: contain !important;
+      padding: 4px 18px 18px !important;
+      scroll-padding-inline: 18px !important;
+      scroll-snap-type: inline mandatory !important;
+      scrollbar-width: thin !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+
+    #tuki-tts-landing .tts-testimonial-video {
+      border-radius: 18px !important;
+      scroll-snap-align: start !important;
+    }
+
+    #tuki-tts-landing .tts-testimonial-image-grid {
+      gap: 12px !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #tuki-tts-landing .tts-testimonial-image {
+      border-radius: 12px !important;
+    }
+
+    #tuki-tts-landing .tts-testimonials__image-title {
+      margin-bottom: 22px !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox {
+      padding: 18px !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__dialog {
+      padding: 58px 0 66px !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__image {
+      border-radius: 12px !important;
+      max-height: calc(100vh - 150px) !important;
+      max-width: 100% !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__button {
+      height: 44px !important;
+      width: 44px !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__close {
+      right: 0 !important;
+      top: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__previous,
+    #tuki-tts-landing .tts-feedback-lightbox__next {
+      bottom: 0 !important;
+      top: auto !important;
+      transform: none !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__previous:hover,
+    #tuki-tts-landing .tts-feedback-lightbox__previous:focus-visible,
+    #tuki-tts-landing .tts-feedback-lightbox__next:hover,
+    #tuki-tts-landing .tts-feedback-lightbox__next:focus-visible {
+      transform: scale(1.06) !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__previous {
+      left: calc(50% - 82px) !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__next {
+      right: calc(50% - 82px) !important;
+    }
+
+    #tuki-tts-landing .tts-feedback-lightbox__counter {
+      bottom: 12px !important;
+    }
+
+    #tuki-tts-landing .tts-instructor__portrait {
+      min-height: 420px !important;
+    }
+
+    #tuki-tts-landing .tts-instructor__profile {
+      padding: 30px 24px !important;
+    }
+
+    #tuki-tts-landing .tts-instructor__heading h3 {
+      font-size: 28px !important;
+    }
+
+    #tuki-tts-landing .tts-offer {
+      padding: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-offer__copy {
+      margin-bottom: 30px !important;
+      text-align: left !important;
+    }
+
+    #tuki-tts-landing .tts-offer__cards {
+      gap: 44px !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card__list {
+      gap: 12px !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card__list li {
+      min-height: 0 !important;
+      padding: 20px !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card__list-number {
+      margin-bottom: 14px !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card__icon {
+      font-size: 22px !important;
+      height: 48px !important;
+      width: 48px !important;
+    }
+
+    #tuki-tts-landing .tts-offer__inner h3 {
+      margin-top: 18px !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card {
+      min-height: 0 !important;
+      padding: 28px 24px !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card--one-plus-one {
+      gap: 24px !important;
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-offer-card--one-plus-one__image {
+      min-height: 220px !important;
+    }
+
+    #tuki-tts-landing .tts-register {
+      padding-bottom: 60px !important;
+      padding-top: 60px !important;
+    }
+
+    #tuki-tts-landing .tts-form-card {
+      padding: 28px 20px !important;
+    }
+
+    #tuki-tts-landing .tts-form__row {
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-sticky {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 479px) {
+    #tuki-tts-landing .tts-trust-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item,
+    #tuki-tts-landing .tts-trust-item:nth-child(2) {
+      border-bottom: 1px solid #E7E9ED !important;
+      border-right: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-trust-item:last-child {
+      border-bottom: 0 !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card.is-active,
+    #tuki-tts-landing .tts-audience-grid:has(.tts-audience-card:hover) .tts-audience-card:hover {
+      height: 520px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card__content {
+      padding: 18px !important;
+    }
+
+    #tuki-tts-landing .tts-audience-card h3 {
+      font-size: 22px !important;
+    }
+
+    #tuki-tts-landing .tts-sticky__copy {
+      display: none !important;
+    }
+
+    #tuki-tts-landing .tts-sticky .tts-button {
+      width: 100% !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #tuki-tts-landing *,
+    #tuki-tts-landing *::before,
+    #tuki-tts-landing *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @media print {
+    #tuki-tts-landing .tts-sticky,
+    #tuki-tts-landing .tts-video-card,
+    #tuki-tts-landing .tts-form-card {
+      display: none !important;
+    }
+
+    #tuki-tts-landing .tts-hero,
+    #tuki-tts-landing .tts-section--navy,
+    #tuki-tts-landing .tts-register {
+      background: var(--tts-white) !important;
+      color: var(--tts-text) !important;
+    }
+
+    #tuki-tts-landing .tts-hero h1,
+    #tuki-tts-landing .tts-section--navy h2,
+    #tuki-tts-landing .tts-register h2 {
+      color: var(--tts-heading) !important;
+    }
+  }
+</style>
+
+<div id="tuki-tts-landing" role="main">
+  <a class="tts-skip-link" href="#tts-noi-dung">Chuyển đến nội dung chính</a>
+
+  <section class="tts-hero" aria-labelledby="tts-title">
+    <div class="tts-container">
+      <div class="tts-hero__grid">
+        <div class="tts-hero__copy">
+          <h1 id="tts-title" class="tts-text-gradient-important">Khóa học TikTok Shop Business Master</h1>
+          <p class="tts-hero__headline-text">Vận hành shop 2026: <span class="tts-text-gradient-important">Hiểu luật - Lãi thật</span></p>
+          <p class="tts-hero__lead">
+            TUKI UNI Ở ĐÂY ĐỂ ĐỒNG HÀNH CÙNG BẠN XÂY DỰNG MỘT MÔ HÌNH
+            <strong>BÁN TIKTOKSHOP CÓ LÃI</strong>, CÙNG BẠN TẠO RA
+            <strong>CÚ HUÝCH DOANH THU</strong> TRONG NĂM 2026 –
+            <strong>x3 DOANH SỐ</strong> NHƯ NHIỀU HỌC VIÊN ĐÃ LÀM ĐƯỢC!
+          </p>
+          <div class="tts-badge">
+            <span class="tts-badge__dot" aria-hidden="true"></span>
+            Học offline tại Hà Nội &amp; TP.HCM
+          </div>
+
+          <figure class="tts-video-card">
+            <div class="tts-video-card__frame">
+              <iframe
+                src="https://www.youtube.com/embed/49mcSJq5M8o?rel=0&amp;playsinline=1"
+                title="Video giới thiệu Tuki Group"
+                width="560"
+                height="315"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                data-tts-youtube-embed
+                allowfullscreen
+              ></iframe>
+              <button
+                type="button"
+                class="tts-video-card__fallback"
+                aria-label="Phát video giới thiệu Tuki Group"
+                data-tts-youtube-fallback
+                hidden
+              >
+                <img
+                  src="https://i.ytimg.com/vi/49mcSJq5M8o/hqdefault.jpg"
+                  width="480"
+                  height="360"
+                  alt=""
+                  loading="lazy"
+                >
+                <span class="tts-video-card__play" aria-hidden="true">▶</span>
+              </button>
+            </div>
+          </figure>
+
+          <p class="tts-hero__microcopy">
+            Học và thực hành trực tiếp • 12 tháng support sau khóa học • Tư vấn lộ trình trước khi đăng ký
+          </p>
+          <div class="tts-hero__actions">
+            <a class="tts-button" href="#tts-dang-ky" data-tts-event="register_hero">
+              Giữ chỗ khóa học <span aria-hidden="true">→</span>
+            </a>
+            <a class="tts-button tts-button--secondary" href="#tts-lo-trinh" data-tts-event="curriculum_hero">
+              Xem lộ trình 4 buổi
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tts-trust-strip" aria-label="Thông tin nổi bật của khóa học">
+    <div class="tts-container tts-trust-grid">
+      <div class="tts-trust-item">
+        <span class="tts-trust-item__number" data-tts-count="21000" data-tts-suffix="+">21.000+</span>
+        <span class="tts-trust-item__label">Học viên đã <br>lựa chọn Tuki Uni</span>
+      </div>
+      <div class="tts-trust-item">
+        <span class="tts-trust-item__number" data-tts-count="4">4</span>
+        <span class="tts-trust-item__label">Buổi học offline <br>thực chiến</span>
+      </div>
+      <div class="tts-trust-item">
+        <span class="tts-trust-item__number" data-tts-count="12">12</span>
+        <span class="tts-trust-item__label">Tháng đồng hành <br> sau khóa học</span>
+      </div>
+      <div class="tts-trust-item">
+        <span class="tts-trust-item__number" data-tts-count="2">2</span>
+        <span class="tts-trust-item__label">Địa điểm <br> Hà Nội &amp; TP.HCM</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="tts-noi-dung" class="tts-section" aria-labelledby="tts-audience-title">
+    <div class="tts-container">
+      <div class="tts-audience-layout">
+        <header class="tts-audience-heading">
+          <span class="tts-eyebrow">Đúng người — Đúng lộ trình</span>
+          <h2 id="tts-audience-title">Khóa học phù hợp với ai?</h2>
+          <p>Chương trình thiết kế đáp ứng nhu cầu cho Nhà quản lý, nhà bán hàng và nhân sự vận hành kênh TMĐT trên Tiktok Shop.</p>
+          <span class="tts-audience-heading__line" aria-hidden="true"></span>
+        </header>
+
+        <div class="tts-audience-grid" data-tts-audience-grid>
+          <article
+            class="tts-audience-card is-active"
+            tabindex="0"
+            role="button"
+            aria-label="Xem thông tin nhóm Nhà bán hàng"
+            aria-expanded="true"
+            aria-describedby="tts-audience-seller-copy"
+            data-tts-audience-card
+            data-tts-audience-default
+          >
+            <img
+              class="tts-audience-card__image"
+              src="https://tukiuni.vn/wp-content/uploads/2026/08/2.jpg"
+              width="720"
+              height="1200"
+              alt="Nhà bán hàng vận hành gian hàng và livestream trên TikTok Shop"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="tts-audience-card__content" id="tts-audience-seller-copy">
+              <h3>Nhà bán hàng</h3>
+              <p>Các chủ shop đang muốn kinh doanh hiệu quả trên TikTok Shop và xây dựng quy trình vận hành tối ưu.</p>
+            </div>
+            <span class="tts-audience-card__collapsed-title" aria-hidden="true">Nhà bán hàng</span>
+            <span class="tts-audience-card__collapsed-index" aria-hidden="true">02</span>
+          </article>
+
+          <article
+            class="tts-audience-card"
+            tabindex="0"
+            role="button"
+            aria-label="Xem thông tin nhóm Quản lý team thương mại điện tử"
+            aria-expanded="false"
+            aria-describedby="tts-audience-manager-copy"
+            data-tts-audience-card
+          >
+            <img
+              class="tts-audience-card__image"
+              src="https://tukiuni.vn/wp-content/uploads/2026/08/3.jpg"
+              width="720"
+              height="1200"
+              alt="Quản lý team thương mại điện tử xây dựng chiến lược tăng trưởng TikTok Shop"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="tts-audience-card__content" id="tts-audience-manager-copy">
+              <h3>Quản lý team TMĐT</h3>
+              <p>Chưa có nhiều hiểu biết về TikTok Shop, gặp khó khăn trong việc phối hợp với đội ngũ vận hành. Hoặc các nhà quản lý đang tìm kiếm định hướng phát triển doanh thu trên TikTok Shop.</p>
+            </div>
+            <span class="tts-audience-card__collapsed-title" aria-hidden="true">Quản lý team TMĐT</span>
+            <span class="tts-audience-card__collapsed-index" aria-hidden="true">01</span>
+          </article>
+
+          <article
+            class="tts-audience-card"
+            tabindex="0"
+            role="button"
+            aria-label="Xem thông tin nhóm Nhân sự vận hành"
+            aria-expanded="false"
+            aria-describedby="tts-audience-operator-copy"
+            data-tts-audience-card
+          >
+            <img
+              class="tts-audience-card__image"
+              src="https://tukiuni.vn/wp-content/uploads/2026/08/1.jpg"
+              width="720"
+              height="1200"
+              alt="Nhân sự vận hành thương mại điện tử nâng cao chuyên môn TikTok Shop"
+              loading="lazy"
+              decoding="async"
+            >
+            <div class="tts-audience-card__content" id="tts-audience-operator-copy">
+              <h3>Nhân sự vận hành</h3>
+              <p>Đang làm việc trong lĩnh vực TMĐT, muốn mở rộng chuyên môn để từng bước trở thành quản lý.</p>
+            </div>
+            <span class="tts-audience-card__collapsed-title" aria-hidden="true">Nhân sự vận hành</span>
+            <span class="tts-audience-card__collapsed-index" aria-hidden="true">03</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="tts-content-stack">
+        <article class="tts-panel tts-panel--problem">
+          <h3>Nếu bạn đang gặp những<br>vấn đề sau</h3>
+          <div class="tts-problem-grid">
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">01</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-money-bill-alt"></i></span>
+              <h4>Không cân đối được giá &amp; chi phí</h4>
+              <p>Phí sàn ngày 1 tăng, chưa biết <strong>cân đối giá bán và chi phí</strong> vận hành, tận dụng voucher để tối ưu lợi nhuận.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">02</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-clone"></i></span>
+              <h4>Chưa biết build &amp; scale sản phẩm</h4>
+              <p>Chưa biết cách <strong>build sản phẩm mới &amp; scale doanh thu</strong>.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">03</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-chart-bar"></i></span>
+              <h4>Đầu tư nhiều nhưng không thấy lãi</h4>
+              <p>Càng làm càng... không thấy lãi. Đầu tư chi phí <strong>booking, live</strong> nhưng chưa biết chọn thời điểm nào để <strong>dồn ngân sách</strong>, thời điểm nào <strong>xác định lỗ để build shop</strong>, thời điểm nào là <strong>hòa vốn</strong>, mất định hướng phát triển.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">04</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="fas fa-bullhorn"></i></span>
+              <h4>Chi phí tăng, doanh số không tăng</h4>
+              <p>Tiêu <strong>ads, booking, affiliate</strong>, nhưng số tăng không đáng kể chỉ thấy <strong>chi phí tăng</strong>.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">05</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-handshake"></i></span>
+              <h4>Phụ thuộc KOC/KOL, khó deal giá</h4>
+              <p>Chưa biết cách <strong>deal giá booking</strong>, làm việc KOCs ra kết quả, từng phụ thuộc KOCs, KOLs lớn nhưng khi KOC, KOL có vấn đề thì <strong>gẫy doanh số</strong>.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">06</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-play-circle"></i></span>
+              <h4>Thiếu video chuyển đổi</h4>
+              <p>Inhouse chưa có công thức để ra <strong>video "chuyển đổi"</strong>, và sản lượng video thấp <strong>không đủ để chạy GMV Max</strong>.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">07</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-compass"></i></span>
+              <h4>Không hiểu thuật toán GMV Max</h4>
+              <p><strong>Chưa hiểu thuật toán</strong> phân bổ ngân sách tự động của <strong>GMV Max</strong> – đẩy tiền vào nhưng không biết hệ thống đang ưu tiên sản phẩm/video nào, dẫn đến <strong>đốt tiền mà không ra kết quả</strong>.</p>
+            </article>
+            <article class="tts-problem-card">
+              <span class="tts-problem-card__number">08</span>
+              <span class="tts-problem-card__icon" aria-hidden="true"><i class="far fa-object-group"></i></span>
+              <h4>Quy trình chồng chéo, đổ lỗi</h4>
+              <p><strong>Quy trình</strong> làm việc <strong>chồng chéo</strong> giữa các nhân sự. Gặp vấn đề thì không ai chịu trách nhiệm, <strong>chỉ đổ lỗi</strong>.</p>
+            </article>
+          </div>
+        </article>
+
+        <article class="tts-panel tts-panel--outcome">
+          <h3>Sau khóa học, bạn có thể</h3>
+          <div class="tts-outcome-timeline">
+            <article class="tts-outcome-step tts-outcome-step--right">
+              <span class="tts-outcome-step__number">1</span>
+              <div class="tts-outcome-step__content">
+                <span class="tts-outcome-step__eyebrow">Nền tảng kinh doanh</span>
+                <h4>Vận hành TikTok Shop có lãi</h4>
+                <p>Xây được mô hình kinh doanh có lãi, biết lúc nào cần đầu tư, chấp nhận lỗ chiến lược hay thu tiền về; hiểu trọn quy trình vận hành từ A–Z.</p>
+              </div>
+            </article>
+            <article class="tts-outcome-step tts-outcome-step--left">
+              <span class="tts-outcome-step__number">2</span>
+              <div class="tts-outcome-step__content">
+                <span class="tts-outcome-step__eyebrow">Sản phẩm &amp; tồn kho</span>
+                <h4>Phát triển sản phẩm không chôn vốn</h4>
+                <p>Có quy trình bán sản phẩm mới, tổ chức sản xuất và quản lý tồn kho rõ ràng để hạn chế cháy hàng hoặc tồn đọng vốn.</p>
+              </div>
+            </article>
+            <article class="tts-outcome-step tts-outcome-step--right">
+              <span class="tts-outcome-step__number">3</span>
+              <div class="tts-outcome-step__content">
+                <span class="tts-outcome-step__eyebrow">Nội dung hiệu suất</span>
+                <h4>Sản xuất video quy mô lớn</h4>
+                <p>Tăng tốc với quy trình sản xuất video công nghiệp: 1 ngày có thể triển khai 50 video cùng đội ngũ tinh gọn 2 nhân sự.</p>
+              </div>
+            </article>
+            <article class="tts-outcome-step tts-outcome-step--left">
+              <span class="tts-outcome-step__number">4</span>
+              <div class="tts-outcome-step__content">
+                <span class="tts-outcome-step__eyebrow">Quảng cáo &amp; ROI</span>
+                <h4>Làm chủ GMV Max để giữ lợi nhuận</h4>
+                <p>Biết thời điểm tăng ngân sách để tối ưu ROI và thời điểm giảm đầu tư để bảo toàn lợi nhuận.</p>
+              </div>
+            </article>
+            <article class="tts-outcome-step tts-outcome-step--right">
+              <span class="tts-outcome-step__number">5</span>
+              <div class="tts-outcome-step__content">
+                <span class="tts-outcome-step__eyebrow">KOC &amp; chuyển đổi</span>
+                <h4>Booking hiệu quả, video chuyển đổi tốt</h4>
+                <p>Nắm công thức booking, chọn KOC phù hợp, deal giá thông minh và tận dụng nguồn video để nuôi doanh thu đều đặn.</p>
+              </div>
+            </article>
+            <article class="tts-outcome-step tts-outcome-step--left">
+              <span class="tts-outcome-step__number">6</span>
+              <div class="tts-outcome-step__content">
+                <span class="tts-outcome-step__eyebrow">Tăng trưởng dài hạn</span>
+                <h4>Tạo đột phá cho kinh doanh</h4>
+                <p>Tìm được những đòn bẩy then chốt để đưa hệ thống vận hành và doanh thu phát triển bền vững.</p>
+              </div>
+            </article>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="tts-lo-trinh" class="tts-section tts-section--soft" aria-labelledby="tts-curriculum-title">
+    <div class="tts-container">
+      <header class="tts-section-heading">
+        <span class="tts-eyebrow">Lộ trình đào tạo</span>
+        <h2 id="tts-curriculum-title">4 buổi offline thực chiến <br>+ 12 tháng support</h2>
+        <p>Học trực tiếp tại lớp, thực hành trên tình huống thật và tiếp tục được hỗ trợ sau khi kết thúc giai đoạn offline.</p>
+      </header>
+
+      <div class="tts-stage-grid">
+        <table aria-label="So sánh hai giai đoạn của khóa học">
+          <thead>
+            <tr>
+              <th scope="col"><span aria-hidden="true">&nbsp;</span></th>
+              <th scope="col">Giai đoạn 1</th>
+              <th scope="col">Giai đoạn 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Nội dung</th>
+              <td>Học và thực hành trực tiếp ngay tại lớp</td>
+              <td>12 tháng support</td>
+            </tr>
+            <tr>
+              <th scope="row">Hình thức</th>
+              <td>Offline</td>
+              <td>Tạo nhóm Zalo hỗ trợ giải đáp 1-1</td>
+            </tr>
+            <tr>
+              <th scope="row">Số lượng</th>
+              <td>4 buổi</td>
+              <td>Không giới hạn</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tts-curriculum">
+        <details class="tts-lesson" open>
+          <summary>
+            <span class="tts-lesson__number">01</span>
+            <span>
+              <span class="tts-lesson__title">Bức tranh tổng quan &amp; xu hướng kinh doanh trên TikTok Shop</span>
+              <span class="tts-lesson__meta">Thuật toán • Hành vi khách hàng • Mô hình lợi nhuận</span>
+            </span>
+            <span class="tts-lesson__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-lesson__content">
+            <ol>
+              <li>Tổng quan về <strong>thuật toán phân phối sản phẩm</strong> TikTok và TikTok Shop.</li>
+              <li>Hiểu <strong>hành vi khách hàng</strong> và tạo trải nghiệm tăng tỷ lệ chốt đơn.</li>
+              <li>Nhận diện các <strong>mô hình kinh doanh có lợi nhuận</strong> trên TikTok Shop 2026.</li>
+              <li>Chọn mô hình xây kênh và shop phù hợp với từng ngành hàng, sản phẩm.</li>
+              <li>Quy trình phân tích sản phẩm thịnh hành trên TikTok Shop.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="tts-lesson" open>
+          <summary>
+            <span class="tts-lesson__number">02</span>
+            <span>
+              <span class="tts-lesson__title">Xây dựng hệ sinh thái sản phẩm &amp; vận hành shop chuẩn từ đầu</span>
+              <span class="tts-lesson__meta">Sản phẩm chủ lực • Giá bán • Affiliate • Vi phạm</span>
+            </span>
+            <span class="tts-lesson__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-lesson__content">
+            <ol>
+              <li>Xây dựng sản phẩm mới thành <strong>sản phẩm chủ lực</strong>, đưa sản phẩm lên top thịnh hành.</li>
+              <li>Kết hợp các sản phẩm và tính giá để <strong>đảm bảo lợi nhuận</strong>.</li>
+              <li>Quy trình vận hành gian hàng chuẩn nền tảng.</li>
+              <li>Xây dựng <strong>hệ thống tiếp thị liên kết</strong>; làm việc hiệu quả với KOC, KOL.</li>
+              <li>Quy trình xử lý các lỗi vi phạm: báo phạt lại, khung hình tĩnh và các tình huống thường gặp.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="tts-lesson" open>
+          <summary>
+            <span class="tts-lesson__number">03</span>
+            <span>
+              <span class="tts-lesson__title">Chiến lược quảng cáo TikTok hiệu quả</span>
+              <span class="tts-lesson__meta">GMV Max • Nội dung • Đọc báo cáo • Tối ưu lợi nhuận</span>
+            </span>
+            <span class="tts-lesson__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-lesson__content">
+            <ol>
+              <li>Thiết kế chiến lược quảng cáo hiệu quả, tối ưu lợi nhuận bán hàng.</li>
+              <li>Quản lý tài nguyên quảng cáo: tài khoản doanh nghiệp, kênh, shop, landing page, pixel.</li>
+              <li>Sử dụng các hình thức quảng cáo TikTok: tăng view, follow và doanh số sản phẩm.</li>
+              <li>Triển khai <strong>GMV Max</strong>, tối ưu ngân sách và nội dung.</li>
+              <li>Tăng đơn hàng từ thẻ sản phẩm trong quảng cáo GMV Max.</li>
+              <li>Làm nội dung từ số lượng đến chất lượng bằng công cụ AI, hoàn toàn miễn phí.</li>
+              <li>Đọc báo cáo, kết hợp dữ liệu quảng cáo với số liệu kinh doanh thực tế để hướng tới có lãi.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="tts-lesson" open>
+          <summary>
+            <span class="tts-lesson__number">04</span>
+            <span>
+              <span class="tts-lesson__title">Thực hành &amp; đối soát hàng hóa, tài chính</span>
+              <span class="tts-lesson__meta">Làm gian hàng • Tạo chiến dịch • AI video • Đối soát</span>
+            </span>
+            <span class="tts-lesson__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-lesson__content">
+            <ol>
+              <li>Làm bài tập nhóm: làm gian hàng, đăng tải sản phẩm, tạo tài khoản quảng cáo và thực hành chiến dịch.</li>
+              <li>Ứng dụng <strong>công cụ AI</strong> sản xuất nội dung video bán hàng trên nền tảng TikTok.</li>
+              <li>Thực hành quy trình vận hành, đối soát hàng hóa và tài chính.</li>
+            </ol>
+          </div>
+        </details>
+      </div>
+
+      <div class="tts-cta-band">
+        <div class="tts-cta-band__copy">
+          <h3>Muốn nhận lịch khai giảng gần nhất?</h3>
+          <p>Chọn địa điểm Hà Nội hoặc TP.HCM trong form để đội ngũ tư vấn đúng lớp phù hợp.</p>
+        </div>
+        <a class="tts-button" href="#tts-dang-ky" data-tts-event="register_after_curriculum">Nhận lịch khai giảng</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tts-section" aria-labelledby="tts-gallery-title">
+    <div class="tts-container">
+      <div class="tts-gallery-layout">
+        <header class="tts-section-heading">
+          <span class="tts-eyebrow">Học thật - Làm thật</span>
+          <h2 id="tts-gallery-title">Hơn 21.000+ học viên đã lựa chọn Tuki Uni</h2>
+          <p>Hơn 21.000 học viên đã lựa chọn Tuki Uni. Dưới đây là những phản hồi chân thực sau khi họ áp dụng kiến thức vào vận hành TikTok Shop và ra kết quả thật.</p>
+        </header>
+
+        <div class="tts-gallery-marquee" aria-label="Hình ảnh hoạt động đào tạo tại Tuki Group">
+          <div class="tts-gallery-marquee__column tts-gallery-marquee__column--down">
+            <div class="tts-gallery-marquee__track">
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+            </div>
+          </div>
+          <div class="tts-gallery-marquee__column tts-gallery-marquee__column--up">
+            <div class="tts-gallery-marquee__track">
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+            </div>
+          </div>
+          <div class="tts-gallery-marquee__column tts-gallery-marquee__column--down">
+            <div class="tts-gallery-marquee__track">
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-21-1024x576.jpg" width="1024" height="576" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-18-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+              <span class="tts-gallery-marquee__item"><img src="https://tukigroup.vn/wp-content/uploads/2024/05/anh-lop-hoc-thang-5-14-768x432.jpg" width="768" height="432" alt="" loading="lazy" decoding="async"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tts-section tts-testimonials" aria-labelledby="tts-testimonials-title">
+    <div class="tts-container">
+      <header class="tts-section-heading tts-testimonials__heading">
+        <span class="tts-eyebrow">Phản hồi học viên</span>
+        <h2 id="tts-testimonials-title">Học viên nói gì sau khi tham gia khoá học</h2>
+        <p>Hàng trăm chủ shop đã thay đổi doanh thu và vận hành tối ưu hơn với khoá học Tiktok Shop Master từ Tuki Uni.</p>
+      </header>
+
+      <section class="tts-testimonials__group" aria-label="Phản hồi bằng video">
+        <div class="tts-testimonial-video-grid">
+          <figure class="tts-testimonial-video">
+            <iframe
+              src="https://www.youtube.com/embed/PRQz-YtSFEM?rel=0"
+              title="Phản hồi video của học viên Tuki Uni 1"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </figure>
+          <figure class="tts-testimonial-video">
+            <iframe
+              src="https://www.youtube.com/embed/PRQz-YtSFEM?rel=0"
+              title="Phản hồi video của học viên Tuki Uni 2"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </figure>
+          <figure class="tts-testimonial-video">
+            <iframe
+              src="https://www.youtube.com/embed/PRQz-YtSFEM?rel=0"
+              title="Phản hồi video của học viên Tuki Uni 3"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </figure>
+        </div>
+      </section>
+
+      <section class="tts-testimonials__group" aria-labelledby="tts-image-feedback-title">
+        <h3 class="tts-testimonials__image-title" id="tts-image-feedback-title">Một số phản hồi từ học viên mới nhất</h3>
+
+        <div class="tts-testimonial-image-grid">
+          <a class="tts-testimonial-image" href="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh phản hồi học viên 1" data-tts-feedback-image>
+            <img src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="Phản hồi của học viên Tuki Uni 1" loading="lazy" decoding="async">
+          </a>
+          <a class="tts-testimonial-image" href="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh phản hồi học viên 2" data-tts-feedback-image>
+            <img src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="Phản hồi của học viên Tuki Uni 2" loading="lazy" decoding="async">
+          </a>
+          <a class="tts-testimonial-image" href="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh phản hồi học viên 3" data-tts-feedback-image>
+            <img src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="Phản hồi của học viên Tuki Uni 3" loading="lazy" decoding="async">
+          </a>
+          <a class="tts-testimonial-image" href="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh phản hồi học viên 4" data-tts-feedback-image>
+            <img src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="Phản hồi của học viên Tuki Uni 4" loading="lazy" decoding="async">
+          </a>
+          <a class="tts-testimonial-image" href="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh phản hồi học viên 5" data-tts-feedback-image>
+            <img src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="Phản hồi của học viên Tuki Uni 5" loading="lazy" decoding="async">
+          </a>
+          <a class="tts-testimonial-image" href="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh phản hồi học viên 6" data-tts-feedback-image>
+            <img src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="Phản hồi của học viên Tuki Uni 6" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <div class="tts-feedback-lightbox" role="dialog" aria-modal="true" aria-label="Xem phản hồi học viên" hidden data-tts-feedback-lightbox>
+      <div class="tts-feedback-lightbox__dialog">
+        <button class="tts-feedback-lightbox__button tts-feedback-lightbox__close" type="button" aria-label="Đóng ảnh" data-tts-feedback-close>×</button>
+        <button class="tts-feedback-lightbox__button tts-feedback-lightbox__previous" type="button" aria-label="Xem ảnh trước" data-tts-feedback-previous>‹</button>
+        <img class="tts-feedback-lightbox__image" src="https://tukiuni.vn/wp-content/uploads/2026/06/phan-hoi-cua-hoc-vien-khoa-hoc-shopee-chuyen-sau-2.jpg" alt="" data-tts-feedback-lightbox-image>
+        <button class="tts-feedback-lightbox__button tts-feedback-lightbox__next" type="button" aria-label="Xem ảnh tiếp theo" data-tts-feedback-next>›</button>
+        <span class="tts-feedback-lightbox__counter" aria-live="polite" data-tts-feedback-counter>1 / 6</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="tts-section tts-section--soft" aria-labelledby="tts-instructor-title">
+    <div class="tts-container">
+      <header class="tts-section-heading">
+        <span class="tts-eyebrow">Giảng viên khóa học</span>
+        <h2 id="tts-instructor-title">Kinh nghiệm từ người trực tiếp vận hành và triển khai quảng cáo</h2>
+      </header>
+
+      <article class="tts-instructor">
+        <figure class="tts-instructor__portrait">
+          <img
+            src="https://tukiuni.vn/wp-content/uploads/2026/06/mr-hoang-vuong-hoang-giang-vien-khoa-hoc-tiktok-business-master.jpg"
+            width="900"
+            height="1200"
+            alt="Mr. Hoàng Vương Hoàng, giảng viên khóa học TikTok Shop Business Master"
+            loading="lazy"
+            decoding="async"
+          >
+        </figure>
+
+        <div class="tts-instructor__profile">
+          <div class="tts-instructor__heading">
+            <h3>Mr. Hoàng Vương Hoàng</h3>
+            <p>Co-Founder COMME ASIA</p>
+          </div>
+          <ul class="tts-instructor__highlights">
+            <li><span class="tts-instructor__mark" aria-hidden="true">✓</span><span>Quản trị hơn <strong>400 seller TikTok Shop</strong>.</span></li>
+            <li><span class="tts-instructor__mark" aria-hidden="true">✓</span><span>Hỗ trợ hơn <strong>1.000 doanh nghiệp và cá nhân</strong> triển khai quảng cáo, vận hành TikTok Shop.</span></li>
+            <li><span class="tts-instructor__mark" aria-hidden="true">✓</span><span>Đã giảng dạy hơn <strong>75 khóa Facebook Ads và TikTok Ads</strong>.</span></li>
+            <li><span class="tts-instructor__mark" aria-hidden="true">✓</span><span>Học viên ghi nhận mức <strong>GMV 7 tỷ/tháng</strong>.</span></li>
+            <li><span class="tts-instructor__mark" aria-hidden="true">✓</span><span>Từng phụ trách Marketing tại Vatajia Group.</span></li>
+            <li><span class="tts-instructor__mark" aria-hidden="true">✓</span><span>Trực tiếp triển khai hàng nghìn chiến dịch quảng cáo thành công.</span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="tts-section" aria-labelledby="tts-offer-title">
+    <div class="tts-container">
+      <div class="tts-offer">
+        <div class="tts-offer__copy">
+          <span class="tts-eyebrow">Dành riêng cho bạn</span>
+          <h2 id="tts-offer-title">Ưu đãi đặc biệt khi đăng ký ngay trong tháng này</h2>
+          <p>Quà tặng giúp chủ shop và nhân sự vận hành đồng bộ cách làm, giảm thời gian tự tìm kiếm tài liệu rời rạc.</p>
+        </div>
+
+        <div class="tts-offer__cards">
+          <article class="tts-offer__inner tts-offer__inner--one-plus-one">
+            <div class="tts-offer-card--one-plus-one__copy">
+              <span class="tts-offer-card__icon" aria-hidden="true">1</span>
+              <h3>CHƯƠNG TRÌNH 1 TẶNG 1</h3>
+              <p><strong>Tặng ngay 1 slot học cùng miễn phí dành cho nhân sự vận hành khi đi học cùng chủ Shop để đồng bộ quan điểm giúp kinh doanh có lãi.</strong></p>
+            </div>
+            <figure class="tts-offer-card--one-plus-one__image">
+              <img src="http://tukiuni.vn/wp-content/uploads/2026/08/tuki-group-uu-dai-khoa-hoc-tiktok-shop.jpg" alt="Ưu đãi khóa học TikTok Shop Tuki Group" loading="lazy" decoding="async">
+            </figure>
+          </article>
+
+          <section class="tts-offer__inner tts-offer__inner--golden-kit">
+            <span class="tts-offer-card__icon" aria-hidden="true">2</span>
+            <h3>BỘ QUÀ TẶNG BÍ KÍP VÀNG ĐỘC QUYỀN <span class="tts-offer__golden-value">TRỊ GIÁ 3 TRIỆU ĐỒNG</span></h3>
+            <ul class="tts-offer-card__list">
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">01</span><span><strong>Cẩm nang bán hàng</strong> cùng TikTok Shop</span></li>
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">02</span><span>Hướng dẫn <strong>tạo nội dung Video &amp; Livestream</strong></span></li>
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">03</span><span>Các <strong>vi phạm quảng cáo</strong> phổ biến trên TikTok Ads tại Việt Nam</span></li>
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">04</span><span>Cổng tra cứu <strong>học viện nhà bán hàng</strong> TikTok Shop (TTS)</span></li>
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">05</span><span>Cách sử dụng các <strong>công cụ khuyến mại</strong> hiệu quả</span></li>
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">06</span><span>Hướng dẫn <strong>Link Tiếp Thị Liên Kết</strong> dành cho Nhà Sáng Tạo</span></li>
+              <li><span class="tts-offer-card__list-number" aria-hidden="true">07</span><span>Tặng <strong>Tài khoản quảng cáo</strong></span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tts-section tts-section--soft" aria-labelledby="tts-faq-title">
+    <div class="tts-container">
+      <header class="tts-section-heading">
+        <span class="tts-eyebrow">Câu hỏi thường gặp</span>
+        <h2 id="tts-faq-title">Bạn có thắc mắc gì về khóa học?</h2>
+      </header>
+
+      <div class="tts-reading tts-faq">
+        <details class="tts-faq-item">
+          <summary>
+            <span>1. Bán hàng tại thị trường nước ngoài có tham gia được không?</span>
+            <span class="tts-faq-item__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-faq-item__answer">
+            <strong>Có.</strong> Nền tảng vận hành có nhiều điểm tương đồng; học viên cần đối chiếu thêm chính sách riêng của từng thị trường.
+          </div>
+        </details>
+
+        <details class="tts-faq-item">
+          <summary>
+            <span>2. Đã học tại Tuki Uni nhưng vẫn gặp khó khăn thì có được hỗ trợ không?</span>
+            <span class="tts-faq-item__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-faq-item__answer">
+            <strong>Có.</strong> Tuki Uni hỗ trợ học viên học lại miễn phí một lần trong vòng 2 tháng kể từ khi đăng ký khóa học.
+          </div>
+        </details>
+
+        <details class="tts-faq-item">
+          <summary>
+            <span>3. Chưa kinh doanh trên TikTok Shop nhưng đã làm sàn TMĐT khác có học được không?</span>
+            <span class="tts-faq-item__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-faq-item__answer">
+            <strong>Có.</strong> Kinh nghiệm vận hành sàn khác là lợi thế. Khóa học tập trung làm rõ sự khác biệt trong thuật toán phân phối, sản xuất nội dung, GMV Max, affiliate và quy trình tăng trưởng có lợi nhuận trên TikTok Shop.
+          </div>
+        </details>
+
+        <details class="tts-faq-item">
+          <summary>
+            <span>4. TikTok Shop Business Master khác các khóa học khác ở điểm nào?</span>
+            <span class="tts-faq-item__toggle" aria-hidden="true">+</span>
+          </summary>
+          <div class="tts-faq-item__answer">
+            Chương trình được xây dựng từ kinh nghiệm vận hành thực tế của đội ngũ đang quản trị nhiều seller TikTok Shop. Nội dung tập trung vào <strong>quy trình tạo lợi nhuận và mô hình tăng trưởng bền vững</strong>, không chỉ hướng dẫn chạy quảng cáo hay tăng doanh số.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="tts-dang-ky" class="tts-register" aria-labelledby="tts-register-title">
+    <div class="tts-container tts-register__grid">
+      <div class="tts-register__copy">
+        <span class="tts-eyebrow">Đăng ký tư vấn</span>
+        <h2 id="tts-register-title">Nhận ngay học phí cụ thể và lớp học gần nhất</h2>
+        <p>Để lại thông tin để đội ngũ Tuki Uni tư vấn lộ trình, lịch khai giảng và địa điểm học phù hợp với bạn.</p>
+
+        <ul class="tts-register__contact-list">
+          <li><span aria-hidden="true">☎</span><span>Hotline: <a href="tel:+84975099962">0975 099 962</a> · <a href="tel:+84345811456">0345 811 456</a></span></li>
+          <li><span aria-hidden="true">@</span><span>Email: <a href="mailto:tukigroup123@gmail.com">tukigroup123@gmail.com</a></span></li>
+          <li><span aria-hidden="true">⌖</span><span>Hà Nội: Số 35 Lê Văn Lương, Thanh Xuân, Hà Nội</span></li>
+          <li><span aria-hidden="true">⌖</span><span>TP.HCM: 65 Nguyễn Minh Hoàng, Phường 12, Tân Bình</span></li>
+        </ul>
+      </div>
+
+      <div class="tts-form-card">
+        <h3>Nhận thông tin khóa học</h3>
+        <p class="tts-form-card__lead">Sau khi xác nhận, thiết bị sẽ mở ứng dụng email với nội dung đăng ký đã được điền sẵn.</p>
+
+        <form
+          class="tts-form"
+          data-tts-form
+          action="mailto:tukigroup123@gmail.com"
+          method="post"
+          enctype="text/plain"
+          novalidate
+        >
+          <div class="tts-form__row">
+            <div class="tts-field">
+              <label for="tts-name">Họ và tên <span aria-hidden="true">*</span></label>
+              <input id="tts-name" name="name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" aria-describedby="tts-name-error" aria-required="true">
+              <span id="tts-name-error" class="tts-field__error">Vui lòng nhập họ và tên.</span>
+            </div>
+
+            <div class="tts-field">
+              <label for="tts-phone">Số điện thoại <span aria-hidden="true">*</span></label>
+              <input id="tts-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="09xx xxx xxx" aria-describedby="tts-phone-error" aria-required="true">
+              <span id="tts-phone-error" class="tts-field__error">Vui lòng nhập số điện thoại hợp lệ.</span>
+            </div>
+          </div>
+
+          <div class="tts-form__row">
+            <div class="tts-field">
+              <label for="tts-email">Email</label>
+              <input id="tts-email" name="email" type="email" autocomplete="email" placeholder="ban@email.com" aria-describedby="tts-email-error">
+              <span id="tts-email-error" class="tts-field__error">Địa chỉ email chưa đúng định dạng.</span>
+            </div>
+
+            <div class="tts-field">
+              <label for="tts-city">Địa điểm mong muốn <span aria-hidden="true">*</span></label>
+              <select id="tts-city" name="city" aria-describedby="tts-city-error" aria-required="true">
+                <option value="">Chọn địa điểm</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="TP.HCM">TP.HCM</option>
+                <option value="Cần tư vấn">Cần tư vấn thêm</option>
+              </select>
+              <span id="tts-city-error" class="tts-field__error">Vui lòng chọn địa điểm.</span>
+            </div>
+          </div>
+
+          <div class="tts-field">
+            <label for="tts-role">Vai trò hiện tại</label>
+            <select id="tts-role" name="role">
+              <option value="Chủ shop / Chủ doanh nghiệp">Chủ shop / Chủ doanh nghiệp</option>
+              <option value="Quản lý vận hành">Quản lý vận hành</option>
+              <option value="Nhân sự vận hành sàn">Nhân sự vận hành sàn</option>
+              <option value="Người mới bắt đầu">Người mới bắt đầu</option>
+              <option value="Khác">Khác</option>
+            </select>
+          </div>
+
+          <div class="tts-field">
+            <label for="tts-note">Vấn đề bạn muốn giải quyết</label>
+            <textarea id="tts-note" name="note" placeholder="Ví dụ: Ads tăng chi phí, chưa kiểm soát lợi nhuận, cần xây quy trình video..."></textarea>
+          </div>
+
+          <button class="tts-button tts-button--full" type="submit" data-tts-event="submit_registration">
+            Chuẩn bị email đăng ký <span aria-hidden="true">→</span>
+          </button>
+          <p class="tts-form__note">
+            Bằng việc tiếp tục, bạn đồng ý để Tuki Group liên hệ về chương trình đào tạo. Bạn cũng có thể gọi trực tiếp hotline ở bên trái.
+          </p>
+          <div class="tts-form__status" data-tts-form-status role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="tts-sticky" data-tts-sticky aria-label="Đăng ký khóa học">
+    <div class="tts-sticky__copy">
+      <strong>TikTok Shop Business Master</strong>
+      <span>4 buổi offline + 12 tháng support</span>
+    </div>
+    <a class="tts-button" href="#tts-dang-ky" data-tts-event="register_sticky">Đăng ký ngay</a>
+  </div>
+</div>
+
+<script>
+  (function () {
+    "use strict";
+
+    var root = document.getElementById("tuki-tts-landing");
+    if (!root || root.getAttribute("data-tts-ready") === "true") {
+      return;
+    }
+    root.setAttribute("data-tts-ready", "true");
+
+    root.querySelectorAll(".tts-curriculum .tts-lesson").forEach(function (lesson) {
+      lesson.open = true;
+    });
+
+    var youtubeEmbed = root.querySelector("[data-tts-youtube-embed]");
+    var youtubeFallback = root.querySelector("[data-tts-youtube-fallback]");
+    var youtubeFrame = youtubeEmbed ? youtubeEmbed.parentElement : null;
+    if (youtubeEmbed) {
+      if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+        var youtubeUrl = new URL(youtubeEmbed.getAttribute("src"));
+        youtubeUrl.searchParams.set("origin", window.location.origin);
+        youtubeEmbed.setAttribute("src", youtubeUrl.toString());
+      } else if (youtubeFallback) {
+        youtubeEmbed.remove();
+        youtubeFallback.hidden = false;
+      }
+    }
+    if (youtubeFallback && youtubeFrame) {
+      youtubeFallback.addEventListener("click", function () {
+        var playableEmbed = document.createElement("iframe");
+        playableEmbed.src = "https://www.youtube.com/embed/49mcSJq5M8o?rel=0&playsinline=1&autoplay=1";
+        playableEmbed.title = "Video giới thiệu Tuki Group";
+        playableEmbed.width = "560";
+        playableEmbed.height = "315";
+        playableEmbed.loading = "lazy";
+        playableEmbed.referrerPolicy = "strict-origin-when-cross-origin";
+        playableEmbed.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+        playableEmbed.allowFullscreen = true;
+        youtubeFallback.replaceWith(playableEmbed);
+      });
+    }
+
+    var countTargets = root.querySelectorAll("[data-tts-count]");
+    if (countTargets.length) {
+      var numberFormatter = new Intl.NumberFormat("vi-VN");
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var countStarted = false;
+
+      function setFinalCount(target) {
+        var finalValue = Number(target.getAttribute("data-tts-count")) || 0;
+        var suffix = target.getAttribute("data-tts-suffix") || "";
+        target.textContent = numberFormatter.format(finalValue) + suffix;
+        target.setAttribute("aria-label", numberFormatter.format(finalValue) + suffix);
+      }
+
+      function animateCount(target, index) {
+        var finalValue = Number(target.getAttribute("data-tts-count")) || 0;
+        var suffix = target.getAttribute("data-tts-suffix") || "";
+        var duration = 1400;
+        var delay = index * 90;
+        var startTime = null;
+
+        target.textContent = "0" + suffix;
+        target.classList.add("tts-is-counting");
+        target.setAttribute("aria-label", numberFormatter.format(finalValue) + suffix);
+
+        function updateCount(timestamp) {
+          if (startTime === null) {
+            startTime = timestamp + delay;
+          }
+          if (timestamp < startTime) {
+            window.requestAnimationFrame(updateCount);
+            return;
+          }
+
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var easedProgress = 1 - Math.pow(1 - progress, 3);
+          var currentValue = Math.round(finalValue * easedProgress);
+          target.textContent = numberFormatter.format(currentValue) + suffix;
+
+          if (progress < 1) {
+            window.requestAnimationFrame(updateCount);
+          } else {
+            setFinalCount(target);
+          }
+        }
+
+        window.requestAnimationFrame(updateCount);
+      }
+
+      function startCountAnimation() {
+        if (countStarted) {
+          return;
+        }
+        countStarted = true;
+        countTargets.forEach(function (target, index) {
+          if (reduceMotion) {
+            setFinalCount(target);
+          } else {
+            animateCount(target, index);
+          }
+        });
+      }
+
+      if ("IntersectionObserver" in window && !reduceMotion) {
+        var countObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                startCountAnimation();
+                countObserver.disconnect();
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        countObserver.observe(root.querySelector(".tts-trust-strip"));
+      } else {
+        startCountAnimation();
+      }
+    }
+
+    var audienceGrid = root.querySelector("[data-tts-audience-grid]");
+    var audienceCards = audienceGrid ? Array.from(audienceGrid.querySelectorAll("[data-tts-audience-card]")) : [];
+    if (audienceCards.length) {
+      var defaultAudienceCard = audienceGrid.querySelector("[data-tts-audience-default]") || audienceCards[0];
+
+      function setActiveAudienceCard(activeCard) {
+        audienceCards.forEach(function (card) {
+          var isActive = card === activeCard;
+          card.classList.toggle("is-active", isActive);
+          card.setAttribute("aria-expanded", isActive ? "true" : "false");
+        });
+      }
+
+      audienceCards.forEach(function (card, index) {
+        card.addEventListener("mouseenter", function () {
+          setActiveAudienceCard(card);
+        });
+
+        card.addEventListener("focus", function () {
+          setActiveAudienceCard(card);
+        });
+
+        card.addEventListener("click", function () {
+          setActiveAudienceCard(card);
+        });
+
+        card.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setActiveAudienceCard(card);
+          }
+
+          if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+            event.preventDefault();
+            audienceCards[(index + 1) % audienceCards.length].focus();
+          }
+
+          if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+            event.preventDefault();
+            audienceCards[(index - 1 + audienceCards.length) % audienceCards.length].focus();
+          }
+        });
+      });
+
+      audienceGrid.addEventListener("mouseleave", function () {
+        setActiveAudienceCard(defaultAudienceCard);
+      });
+    }
+
+    var feedbackImages = Array.from(root.querySelectorAll("[data-tts-feedback-image]"));
+    var feedbackLightbox = root.querySelector("[data-tts-feedback-lightbox]");
+    if (feedbackImages.length && feedbackLightbox) {
+      var feedbackLightboxImage = feedbackLightbox.querySelector("[data-tts-feedback-lightbox-image]");
+      var feedbackCounter = feedbackLightbox.querySelector("[data-tts-feedback-counter]");
+      var feedbackClose = feedbackLightbox.querySelector("[data-tts-feedback-close]");
+      var feedbackPrevious = feedbackLightbox.querySelector("[data-tts-feedback-previous]");
+      var feedbackNext = feedbackLightbox.querySelector("[data-tts-feedback-next]");
+      var feedbackIndex = 0;
+      var feedbackLastFocused = null;
+      var feedbackBodyOverflow = "";
+      var feedbackTouchStartX = 0;
+
+      function renderFeedbackImage() {
+        var activeItem = feedbackImages[feedbackIndex];
+        var thumbnail = activeItem.querySelector("img");
+        feedbackLightboxImage.src = activeItem.href;
+        feedbackLightboxImage.alt = thumbnail ? thumbnail.alt : "Phản hồi của học viên Tuki Uni";
+        feedbackCounter.textContent = String(feedbackIndex + 1) + " / " + String(feedbackImages.length);
+      }
+
+      function openFeedbackLightbox(index) {
+        feedbackIndex = index;
+        feedbackLastFocused = document.activeElement;
+        feedbackBodyOverflow = document.body.style.overflow;
+        renderFeedbackImage();
+        feedbackLightbox.hidden = false;
+        feedbackLightbox.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        feedbackClose.focus();
+      }
+
+      function closeFeedbackLightbox() {
+        feedbackLightbox.classList.remove("is-open");
+        feedbackLightbox.hidden = true;
+        document.body.style.overflow = feedbackBodyOverflow;
+        if (feedbackLastFocused && typeof feedbackLastFocused.focus === "function") {
+          feedbackLastFocused.focus();
+        }
+      }
+
+      function moveFeedbackImage(direction) {
+        feedbackIndex = (feedbackIndex + direction + feedbackImages.length) % feedbackImages.length;
+        renderFeedbackImage();
+      }
+
+      feedbackImages.forEach(function (item, index) {
+        item.addEventListener("click", function (event) {
+          event.preventDefault();
+          openFeedbackLightbox(index);
+        });
+      });
+
+      feedbackClose.addEventListener("click", closeFeedbackLightbox);
+      feedbackPrevious.addEventListener("click", function () {
+        moveFeedbackImage(-1);
+      });
+      feedbackNext.addEventListener("click", function () {
+        moveFeedbackImage(1);
+      });
+
+      feedbackLightbox.addEventListener("click", function (event) {
+        if (event.target === feedbackLightbox) {
+          closeFeedbackLightbox();
+        }
+      });
+
+      feedbackLightbox.addEventListener("touchstart", function (event) {
+        feedbackTouchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      feedbackLightbox.addEventListener("touchend", function (event) {
+        var touchDistance = event.changedTouches[0].clientX - feedbackTouchStartX;
+        if (Math.abs(touchDistance) > 50) {
+          moveFeedbackImage(touchDistance > 0 ? -1 : 1);
+        }
+      }, { passive: true });
+
+      document.addEventListener("keydown", function (event) {
+        if (feedbackLightbox.hidden) {
+          return;
+        }
+        if (event.key === "Escape") {
+          closeFeedbackLightbox();
+        } else if (event.key === "ArrowLeft") {
+          moveFeedbackImage(-1);
+        } else if (event.key === "ArrowRight") {
+          moveFeedbackImage(1);
+        }
+      });
+    }
+
+    var analyticsTargets = root.querySelectorAll("[data-tts-event]");
+    analyticsTargets.forEach(function (target) {
+      target.addEventListener("click", function () {
+        var eventName = target.getAttribute("data-tts-event");
+        if (eventName && Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: "tuki_tts_interaction",
+            tuki_tts_action: eventName
+          });
+        }
+      });
+    });
+
+    var form = root.querySelector("[data-tts-form]");
+    if (form) {
+      var status = form.querySelector("[data-tts-form-status]");
+      var fields = {
+        name: form.querySelector("#tts-name"),
+        phone: form.querySelector("#tts-phone"),
+        email: form.querySelector("#tts-email"),
+        city: form.querySelector("#tts-city"),
+        role: form.querySelector("#tts-role"),
+        note: form.querySelector("#tts-note")
+      };
+
+      function setFieldState(field, isValid) {
+        if (!field) {
+          return;
+        }
+        var error = form.querySelector("#" + field.id + "-error");
+        field.setAttribute("aria-invalid", isValid ? "false" : "true");
+        if (error) {
+          error.setAttribute("data-visible", isValid ? "false" : "true");
+        }
+      }
+
+      function normalizePhone(value) {
+        return String(value || "").replace(/[^\d+]/g, "");
+      }
+
+      function validateForm() {
+        var firstInvalid = null;
+        var nameValid = fields.name.value.trim().length >= 2;
+        var phoneValue = normalizePhone(fields.phone.value);
+        var phoneValid = /^(?:\+?84|0)\d{9,10}$/.test(phoneValue);
+        var emailValue = fields.email.value.trim();
+        var emailValid = emailValue === "" || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+        var cityValid = fields.city.value !== "";
+
+        setFieldState(fields.name, nameValid);
+        setFieldState(fields.phone, phoneValid);
+        setFieldState(fields.email, emailValid);
+        setFieldState(fields.city, cityValid);
+
+        [fields.name, fields.phone, fields.email, fields.city].forEach(function (field) {
+          if (!firstInvalid && field.getAttribute("aria-invalid") === "true") {
+            firstInvalid = field;
+          }
+        });
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return false;
+        }
+        return true;
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.setAttribute("data-visible", "false");
+        status.textContent = "";
+
+        if (!validateForm()) {
+          return;
+        }
+
+        var subject = "Đăng ký TikTok Shop Business Master - " + fields.name.value.trim();
+        var body = [
+          "Họ và tên: " + fields.name.value.trim(),
+          "Số điện thoại: " + fields.phone.value.trim(),
+          "Email: " + (fields.email.value.trim() || "Không cung cấp"),
+          "Địa điểm mong muốn: " + fields.city.value,
+          "Vai trò: " + fields.role.value,
+          "Vấn đề cần tư vấn: " + (fields.note.value.trim() || "Chưa cung cấp"),
+          "",
+          "Nguồn: Landing page TikTok Shop Business Master"
+        ].join("\n");
+
+        status.textContent = "Đã chuẩn bị nội dung đăng ký. Ứng dụng email trên thiết bị sẽ được mở; nếu không mở, vui lòng gọi 0975 099 962.";
+        status.setAttribute("data-visible", "true");
+
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: "tuki_tts_form_valid",
+            tuki_tts_city: fields.city.value,
+            tuki_tts_role: fields.role.value
+          });
+        }
+
+        window.location.href =
+          "mailto:tukigroup123@gmail.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+      });
+
+      [fields.name, fields.phone, fields.email, fields.city].forEach(function (field) {
+        field.addEventListener("input", function () {
+          if (field.getAttribute("aria-invalid") === "true") {
+            setFieldState(field, true);
+          }
+        });
+        field.addEventListener("change", function () {
+          if (field.getAttribute("aria-invalid") === "true") {
+            setFieldState(field, true);
+          }
+        });
+      });
+    }
+
+    var registerSection = root.querySelector("#tts-dang-ky");
+    var sticky = root.querySelector("[data-tts-sticky]");
+    if (registerSection && sticky && "IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            sticky.classList.toggle("tts-sticky--hidden", entry.isIntersecting);
+          });
+        },
+        { threshold: 0.08 }
+      );
+      observer.observe(registerSection);
+    }
+  })();
+</script>
