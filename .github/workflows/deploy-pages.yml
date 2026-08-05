@@ -33,7 +33,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir _site
-          cp index.html _site/index.html
+          cp landing-page-tiktok-shop-business-master.html _site/index.html
 
       - name: Upload landing page
         uses: actions/upload-pages-artifact@v3
