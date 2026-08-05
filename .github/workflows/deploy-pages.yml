@@ -34,6 +34,9 @@ jobs:
         run: |
           mkdir _site
           cp landing-page-tiktok-shop-business-master.html _site/index.html
+          cp landing-page-shopee-chuyen-sau.html _site/landing-page-shopee-chuyen-sau.html
+          mkdir -p _site/source/img
+          cp -R source/img/shopee-chuyen-sau _site/source/img/shopee-chuyen-sau
 
       - name: Upload landing page
         uses: actions/upload-pages-artifact@v3
