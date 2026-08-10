@@ -689,24 +689,45 @@
   }
 
   #tuki-tts-landing .tts-section-heading .tts-curriculum-subtitle {
-    animation: tts-curriculum-subtitle-enter 820ms var(--tts-ease) both, tts-curriculum-subtitle-glow 3.2s ease-in-out 820ms infinite !important;
+    background: var(--tts-white) !important;
+    border-left: 3px solid var(--tts-brand-red) !important;
+    border-right: 3px solid var(--tts-brand-red) !important;
+    color: var(--tts-brand-red) !important;
     display: inline-block !important;
     font-family: var(--tts-font-heading) !important;
-    font-size: 42px !important;
+    font-size: 24px !important;
     font-weight: 800 !important;
     letter-spacing: -.025em !important;
     line-height: 1.16 !important;
     margin-top: 14px !important;
+    padding: 8px 16px !important;
+    position: relative !important;
+    -webkit-text-fill-color: var(--tts-brand-red) !important;
   }
 
-  @keyframes tts-curriculum-subtitle-enter {
-    from { opacity: 0; transform: translateY(14px) scale(.96); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+  #tuki-tts-landing .tts-section-heading .tts-curriculum-subtitle::before,
+  #tuki-tts-landing .tts-section-heading .tts-curriculum-subtitle::after {
+    background: var(--tts-brand-red) !important;
+    border-radius: 50% !important;
+    content: "" !important;
+    height: 14px !important;
+    position: absolute !important;
+    width: 14px !important;
   }
 
-  @keyframes tts-curriculum-subtitle-glow {
-    0%, 100% { filter: drop-shadow(0 0 0 rgba(233, 73, 80, 0)); }
-    50% { filter: drop-shadow(0 0 12px rgba(255, 96, 102, .72)); }
+  #tuki-tts-landing .tts-section-heading .tts-curriculum-subtitle::before {
+    left: -8px !important;
+    top: -8px !important;
+  }
+
+  #tuki-tts-landing .tts-section-heading .tts-curriculum-subtitle::after {
+    bottom: -8px !important;
+    right: -8px !important;
+  }
+
+  #tuki-tts-landing .tts-curriculum-subtitle [data-tts-typing] {
+    border-right: 2px solid var(--tts-brand-red) !important;
+    padding-right: 3px !important;
   }
 
   #tuki-tts-landing .tts-roadmap {
@@ -1974,7 +1995,7 @@
     <div class="tts-container">
       <header class="tts-section-heading">
         <h2 id="tts-curriculum-title">Lộ trình học vận hành &amp; quảng cáo Shopee chuyên sâu</h2>
-        <p class="tts-curriculum-subtitle tts-text-gradient-important">Bứt tốc gấp 3 doanh số cuối năm</p>
+        <p class="tts-curriculum-subtitle" aria-label="Bứt tốc gấp 3 doanh số cuối năm"><span data-tts-typing aria-hidden="true">Bứt tốc gấp 3 doanh số cuối năm</span></p>
       </header>
 
       <div class="tts-roadmap">
@@ -2200,6 +2221,39 @@
     var root = document.getElementById("tuki-tts-landing");
     if (!root || root.getAttribute("data-tts-ready") === "true") return;
     root.setAttribute("data-tts-ready", "true");
+
+    var typingTarget = root.querySelector("[data-tts-typing]");
+    if (typingTarget && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      var typingText = typingTarget.textContent.trim();
+      var typingIndex = 0;
+      var typingDeleting = false;
+      typingTarget.textContent = "";
+
+      function runTypingLoop() {
+        if (!typingDeleting) {
+          typingIndex += 1;
+          typingTarget.textContent = typingText.slice(0, typingIndex);
+          if (typingIndex >= typingText.length) {
+            typingDeleting = true;
+            window.setTimeout(runTypingLoop, 1500);
+            return;
+          }
+          window.setTimeout(runTypingLoop, 68);
+          return;
+        }
+
+        typingIndex -= 1;
+        typingTarget.textContent = typingText.slice(0, Math.max(typingIndex, 0));
+        if (typingIndex <= 0) {
+          typingDeleting = false;
+          window.setTimeout(runTypingLoop, 480);
+          return;
+        }
+        window.setTimeout(runTypingLoop, 34);
+      }
+
+      window.setTimeout(runTypingLoop, 520);
+    }
 
     var analyticsTargets = root.querySelectorAll("[data-tts-event]");
     analyticsTargets.forEach(function (target) {
